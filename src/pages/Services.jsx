@@ -1,6 +1,6 @@
 import { Tab, Nav } from "react-bootstrap";
 import PageHeader from "../components/PageHeader";
-import teacher_img from "../../public/images/teacher.png";
+import teacher_img from "/images/teacher.png";
 import { useSelector } from "react-redux";
 import "../style/Service.css"
 const Services = () => {
@@ -14,7 +14,7 @@ const Services = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="wpo-course-details-wrap">
-                <div className="wpo-course-details-img text-center">
+                <div className="wpo-course-details-img text-center d-flex justify-content-center align-items-center">
                   <img src={teacher.image} alt="Instructor" />
                 </div>
 

@@ -1,7 +1,9 @@
-import logo from "../../public/images/logo-s2.svg";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const teacher = useSelector((state) => state.teacher);
+
   return (
     <>
       <footer className="wpo-site-footer">
@@ -12,7 +14,7 @@ const Footer = () => {
                 <div className="widget about-widget">
                   <div className="logo widget-title">
                     <Link className="navbar-brand" to="/">
-                      <img src={logo} alt="Eduko Logo" />
+                      <img src="/images/logo-s2.svg" alt="Eduko Logo" />
                     </Link>
                   </div>
                   <p>
@@ -99,16 +101,14 @@ const Footer = () => {
                   <div className="contact-ft">
                     <ul>
                       <li>
-                        <i className="fi flaticon-email"></i> Eduko@gmail.com
+                        <i className="fi flaticon-email"></i> {teacher.email}
                       </li>
                       <li>
                         <i className="fi flaticon-phone-call"></i>
-                        <span>(208) 555-0112</span> <br />
-                        <span>(704) 555-0127</span>
+                        <p>{teacher.phone}</p>
                       </li>
                       <li>
-                        <i className="fi flaticon-placeholder"></i> 4517
-                        Washington Ave. <br /> Manchter, Kentucky 495
+                        <i className="fi flaticon-placeholder"></i> {teacher.address}
                       </li>
                     </ul>
                   </div>

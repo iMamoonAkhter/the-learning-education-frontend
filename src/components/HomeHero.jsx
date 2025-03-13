@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom"
-import slider1 from "../../public/images/slider/1.png";
-import client1 from "../../public/images/slider/client1.png"
-import client2 from "../../public/images/slider/client2.png"
-import client3 from "../../public/images/slider/client3.png"
-import client4 from "../../public/images/slider/client4.png"
-import client5 from "../../public/images/slider/client5.png"
-import shape_1 from "../../public/images/slider/shape-1.svg"
-import shape_2 from "../../public/images/slider/shape-2.svg"
-import shape_3 from "../../public/images/slider/shape-3.svg"
-import shape_4 from "../../public/images/slider/shape-4.svg"
+import slider1 from "/images/slider/1.png";
+import client1 from "/images/slider/client1.png"
+import client2 from "/images/slider/client2.png"
+import client3 from "/images/slider/client3.png"
+import client4 from "/images/slider/client4.png"
+import client5 from "/images/slider/client5.png"
+import shape_1 from "/images/slider/shape-1.svg"
+import shape_2 from "/images/slider/shape-2.svg"
+import shape_3 from "/images/slider/shape-3.svg"
+import shape_4 from "/images/slider/shape-4.svg"
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "../style/Homehero.css"

@@ -1,6 +1,6 @@
 import React from "react";
-import funfactShape1 from "../../../public/images/funfact-shape-1.png";
-import funfactShape2 from "../../../public/images/funfact-shape-2.png";
+import funfactShape1 from "/images/funfact-shape-1.png";
+import funfactShape2 from "/images/funfact-shape-2.png";
 
 const About_Badge = () => {
   return (

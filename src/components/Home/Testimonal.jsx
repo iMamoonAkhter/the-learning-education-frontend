@@ -4,9 +4,6 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
-import shape1 from "../../../public/images/testimonial/shape-1.png";
-import shape2 from "../../../public/images/testimonial/shape-2.png";
-import img1 from "../../../public/images/testimonial/thumb1.png";
 import "../../style/testimonal.css";
 
 const testimonials = [
@@ -97,10 +94,10 @@ const Testimonials = () => {
 
       {/* Decorative Shapes */}
       <div className="shape-1">
-        <img src={shape1} alt="shape1" />
+        <img src="/images/testimonial/shape-1.png" alt="shape1" />
       </div>
       <div className="shape-2">
-        <img src={shape2} alt="shape2" />
+        <img src="/images/testimonial/shape-2.png" alt="shape2" />
       </div>
     </section>
   );

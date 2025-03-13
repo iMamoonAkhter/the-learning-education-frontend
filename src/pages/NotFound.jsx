@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Correct way to handle navigation
-import shape1 from "../../public/images/shape/1.svg";
-import shape2 from "../../public/images/shape/2.svg";
-import shape3 from "../../public/images/shape/3.svg";
-import shape4 from "../../public/images/shape/4.svg";
-import error404 from "../../public/images/error-404.png";
+import shape1 from "/images/shape/1.svg";
+import shape2 from "/images/shape/2.svg";
+import shape3 from "/images/shape/3.svg";
+import shape4 from "/images/shape/4.svg";
+import error404 from "/images/error-404.png";
 
 const NotFound = () => {
   return (

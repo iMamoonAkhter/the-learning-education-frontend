@@ -1,5 +1,3 @@
-import preloaderImage from "../../public/images/preloader.png"; // Adjust path as needed
-
 const Preloader = () => {
   return (
     <div className="preloader">
@@ -9,7 +7,8 @@ const Preloader = () => {
           <div className="loader-line-mask">
             <div className="loader-line"></div>
           </div>
-          <img src={preloaderImage} alt="Loading..." />
+          {/* Use the image path instead of import */}
+          <img src="/images/preloader.png" alt="Loading..." />
         </div>
       </div>
     </div>

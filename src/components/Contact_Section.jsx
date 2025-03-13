@@ -3,10 +3,11 @@ import * as Yup from "yup";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useSelector } from "react-redux";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
-
+  const teacher = useSelector((state) => state.teacher);
 
   // Validation Schema using Yup
   const validationSchema = Yup.object({
@@ -80,7 +81,7 @@ const Contact = () => {
                                         </div>
                                         <div className="office-info-text">
                                             <h2>Address</h2>
-                                            <p>7 Green Lake Street Crawfordsville, IN 47933</p>
+                                            <p>{teacher.address}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -93,8 +94,7 @@ const Contact = () => {
                                         </div>
                                         <div className="office-info-text">
                                             <h2>Email Us</h2>
-                                            <p>Eduko@gmail.com</p>
-                                            <p>helloyou@gmail.com</p>
+                                            <p>{teacher.email}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -107,8 +107,7 @@ const Contact = () => {
                                         </div>
                                         <div className="office-info-text">
                                             <h2>Call Now</h2>
-                                            <p>+1 800 123 456 789</p>
-                                            <p>+1 800 123 654 987</p>
+                                            <p>{teacher.phone}</p>
                                         </div>
                                     </div>
                                 </div>
