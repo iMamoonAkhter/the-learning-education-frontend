@@ -2,7 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import { Suspense, useState, useEffect } from "react";
 import AppRoutes from "./routes/AppRoutes";
-import Preloader from "./components/preloader";
+import Preloader from "./components/Preloader";
 
 
 
