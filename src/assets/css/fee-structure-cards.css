@@ -1,0 +1,22 @@
+.custom-card {
+    width: 26rem; /* Default width */
+}
+.list-item{
+    display: flex;
+}
+.list-item img{
+    margin-right: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) { /* Tablets */
+    .custom-card {
+        width: 22rem;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .custom-card {
+        width: 100%; /* Full width on small screens */
+    }
+}

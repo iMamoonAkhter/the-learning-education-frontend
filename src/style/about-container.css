@@ -1,0 +1,32 @@
+.about-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .about-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .about-list li {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .about-list li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-size: 1.2rem;
+  }
+  

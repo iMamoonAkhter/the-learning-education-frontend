@@ -1,0 +1,50 @@
+.wpo-about-section { padding: 80px 0; background: #f8f9fa; }
+    .section-title { font-size: 28px; font-weight: 700; margin-bottom: 20px; color: #333; }
+    .about-list { list-style: none; padding: 0; }
+    .about-list li { font-size: 18px; margin-bottom: 10px; display: flex; align-items: center; }
+    .about-list li i { font-size: 22px; margin-right: 10px; color: #007bff; }
+    .wpo-about-features-item { text-align: center; margin: 15px 0; }
+    .wpo-about-features-item h5 { font-size: 18px; font-weight: 600; margin-top: 10px; }
+
+
+
+    /* Icons */
+   
+      
+      .icon-small {
+        margin-right: 0.625rem; /* 10px = 0.625rem */
+
+        width: 1.5rem; /* 24px */
+      }
+      
+      .icon-medium {
+        width: 2.5rem; /* 40px */
+        margin-right: 0.625rem; /* 10px = 0.625rem */
+
+      }
+      
+      .icon-large {
+        width: 4rem; /* 64px */
+        margin-right: 0.625rem; /* 10px = 0.625rem */
+
+      }
+
+      
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        
+        .icon-large {
+          width: 3.5rem; /* 56px */
+        }
+      }
+      
+      @media (max-width: 480px) {
+     
+        .icon-small {
+          width: 1.25rem; /* 20px */
+        }
+        .icon-large {
+          width: 3rem; /* 48px */
+        }
+      }
+      

@@ -1,0 +1,16 @@
+@import "tailwindcss";
+.error-message{
+    color: red;
+}
+
+/* Target all navbar links */
+.navbar-nav .nav-link {
+    display: block;
+    color: black !important;
+  }
+  
+  /* Target dropdown links */
+  .sub-menu .nav-link {
+    display: block;
+    color: black !important;
+  }

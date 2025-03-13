@@ -1,0 +1,10 @@
+.accordion-item {
+    background-color: white !important;
+  }
+  
+  .accordion-button {
+    background-color: white !important;
+    color: #000 !important; /* Ensuring text is visible */
+    border: 1px solid #ddd; /* Optional: adds a subtle border */
+  }
+  
