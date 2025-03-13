@@ -8,7 +8,7 @@
         Nice Select
     -------------------------------------------*/
 
-    $('.select').niceSelect();
+    // $('.select').niceSelect();
 
    // Function to handle the active class on navigation items
    function handleActiveClass() {
