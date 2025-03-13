@@ -1,5 +1,5 @@
 import { useState } from "react";
-import * as Yup from "yup";
+import Yup from "yup";
 import { useFormik } from "formik";
 import axios from "axios";
 import { toast } from "react-toastify";
