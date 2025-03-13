@@ -1,5 +1,4 @@
-import img1 from "/images/about/img-1.jpg";
-import img2 from "/images/about/img-2.jpg";
+
 
 const SmarterWay = () => {
   return (
@@ -12,12 +11,12 @@ const SmarterWay = () => {
               <div className="wpo-about-img-wrap">
                 <div className="wpo-about-img-left">
                   <div className="wpo-about-img">
-                    <img src={img1} alt="About Us" />
+                    <img src="/images/2nd_Section_Large.png" alt="About Us" />
                   </div>
                 </div>
                 <div className="wpo-about-img-right">
                   <div className="wpo-about-img-inner">
-                    <img src={img2} alt="About Us" />
+                    <img src="/images/2nd_Section_small.png" alt="About Us" />
                   </div>
                   <div className="exprience-wrap">
                     <div className="exprience">

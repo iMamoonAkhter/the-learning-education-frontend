@@ -1,45 +1,8 @@
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import ReactOwlCarousel from "react-owl-carousel";
 import "../../style/couse-section.css"
 import Carousel from "./SubjectSlider";
-const courses = [
-  {
-    title: "Chemistry Tutoring",
-    link: "science-detail.html",
-    icon: "fi flaticon-chemistry",
-    description:
-      "From basic concepts to advanced topics like organic chemistry and thermodynamics, our tutors help students excel in GCSE, A-Level, AP, and IB curricula.",
-  },
-  {
-    title: "Physics Tutoring",
-    link: "science-detail.html",
-    icon: "fi flaticon-physics",
-    description:
-      "Learn the fundamentals of mechanics, electricity, waves, and quantum physics. Our tutors specialize in GCSE, A-Level, AP, and IB Physics.",
-  },
-  {
-    title: "Mathematics Tutoring",
-    link: "math-detail.html",
-    icon: "fi flaticon-math",
-    description:
-      "From basic arithmetic to advanced calculus, our tutors cover all levels, including GCSE, A-Level, AP, and IB Math.",
-  },
-  {
-    title: "English Tutoring",
-    link: "english-detail.html",
-    icon: "fi flaticon-book",
-    description:
-      "Improve reading, writing, and critical thinking skills with our tailored English tutoring for GCSE, A-Level, AP, and IB students.",
-  },
-  {
-    title: "Science Tutoring",
-    link: "science-detail.html",
-    icon: "fi flaticon-science",
-    description:
-      "Our tutors cover general science, biology, chemistry, and physics for students in Grades 1-12, aligned with UK, US, and international curricula.",
-  },
-];
+
 
 const CourseSection = () => {
   return (

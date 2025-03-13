@@ -1,5 +1,4 @@
-import img1 from "/images/about/img-1.jpg";
-import img2 from "/images/about/img-2.jpg";
+
 
 const EmpoweringStudent = () => {
   return (
@@ -12,12 +11,12 @@ const EmpoweringStudent = () => {
               <div className="wpo-about-img-wrap">
                 <div className="wpo-about-img-left">
                   <div className="wpo-about-img">
-                    <img src={img1} alt="About Us" />
+                    <img src="/images/about/About_Us_Large.png" alt="About Us" />
                   </div>
                 </div>
                 <div className="wpo-about-img-right">
                   <div className="wpo-about-img-inner">
-                    <img src={img2} alt="About Us" />
+                    <img src="/images/about/About_Us_small.png" alt="About Us" />
                   </div>
                   <div className="exprience-wrap">
                     <div className="exprience">
