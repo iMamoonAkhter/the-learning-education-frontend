@@ -1,6 +1,6 @@
 import { Tab, Nav } from "react-bootstrap";
 import PageHeader from "../components/PageHeader";
-import teacher_img from "../assets/images/teacher.png";
+import teacher_img from "../../public/images/teacher.png";
 import { useSelector } from "react-redux";
 import "../style/Service.css"
 const Services = () => {

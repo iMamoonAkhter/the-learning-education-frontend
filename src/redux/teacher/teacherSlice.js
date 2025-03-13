@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import cer1 from "../../assets/images/certificates/1.jpg"
-import cer2 from "../../assets/images/certificates/2.jpg"
-import cer3 from "../../assets/images/certificates/3.jpg"
-import cer4 from "../../assets/images/certificates/4.jpg"
-import teacher_img from "../../assets/images/teacher.png"
+import cer1 from "../../../public/images/certificates/1.jpg"
+import cer2 from "../../../public/images/certificates/2.jpg"
+import cer3 from "../../../public/images/certificates/3.jpg"
+import cer4 from "../../../public/images/certificates/4.jpg"
+import teacher_img from "../../../public/images/teacher.png"
 const initialState = {
   name: "Haseeb Nazeer",
   email: "haseeb.nazeer@gmail.com",

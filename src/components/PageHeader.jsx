@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import shape1 from "../assets/images/shape/1.svg";
-import shape2 from "../assets/images/shape/2.svg";
-import shape3 from "../assets/images/shape/3.svg";
-import shape4 from "../assets/images/shape/4.svg";
+import shape1 from "../../public/images/shape/1.svg";
+import shape2 from "../../public/images/shape/2.svg";
+import shape3 from "../../public/images/shape/3.svg";
+import shape4 from "../../public/images/shape/4.svg";
 
 const PageHeader = ({ title }) => {
   return (

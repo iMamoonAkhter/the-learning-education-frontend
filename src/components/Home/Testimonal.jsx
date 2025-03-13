@@ -4,9 +4,9 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
-import shape1 from "../../assets/images/testimonial/shape-1.png";
-import shape2 from "../../assets/images/testimonial/shape-2.png";
-import img1 from "../../assets/images/testimonial/thumb1.png";
+import shape1 from "../../../public/images/testimonial/shape-1.png";
+import shape2 from "../../../public/images/testimonial/shape-2.png";
+import img1 from "../../../public/images/testimonial/thumb1.png";
 import "../../style/testimonal.css";
 
 const testimonials = [

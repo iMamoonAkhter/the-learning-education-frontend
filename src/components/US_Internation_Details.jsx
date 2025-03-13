@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import shoot from "../assets/images/shoot.png";
+import shoot from "../../public/images/shoot.png";
 
 const US_International_Details = () => {
   return (

@@ -1,4 +1,4 @@
-import preloaderImage from "../assets/images/preloader.png"; // Adjust path as needed
+import preloaderImage from "../../public/images/preloader.png"; // Adjust path as needed
 
 const Preloader = () => {
   return (

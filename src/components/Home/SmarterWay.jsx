@@ -1,5 +1,5 @@
-import img1 from "../../assets/images/about/img-1.jpg";
-import img2 from "../../assets/images/about/img-2.jpg";
+import img1 from "../../../public/images/about/img-1.jpg";
+import img2 from "../../../public/images/about/img-2.jpg";
 
 const SmarterWay = () => {
   return (

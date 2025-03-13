@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "../assets/sass/style.css";
-import teacher_pic from "../assets/images/teacher.png";
+import teacher_pic from "../../public/images/teacher.png";
 import { useSelector } from "react-redux";
 const validationSchema = Yup.object({
   name: Yup.string().min(3, "Too short").required("Name is required"),

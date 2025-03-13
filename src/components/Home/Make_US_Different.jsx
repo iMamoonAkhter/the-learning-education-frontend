@@ -1,5 +1,5 @@
 import React from 'react'
-import choose from "../../assets/images/choose.jpg";
+import choose from "../../../public/images/choose.jpg";
 import { Link } from 'react-router-dom';
 const Make_US_Different = () => {
   return (
