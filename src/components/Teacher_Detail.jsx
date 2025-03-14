@@ -1,5 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import Yup from "yup";
+import * as Yup from "yup";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "../assets/sass/style.css";
