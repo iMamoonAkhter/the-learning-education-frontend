@@ -1,0 +1,80 @@
+/* Why Choose Us Section */
+.wpo-why-choose-us {
+    background-color: #fff;
+    padding: 80px 0;
+  }
+  
+  .wpo-section-title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .wpo-section-title p {
+    font-size: 18px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .why-choose-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .why-choose-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+  
+  .why-choose-item-icon {
+    font-size: 24px;
+    color: #3498db;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+  
+  .why-choose-item-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .why-choose-item-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 767.98px) {
+    .wpo-section-title h2 {
+      font-size: 28px;
+    }
+  
+    .wpo-section-title p {
+      font-size: 16px;
+    }
+  
+    .why-choose-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .why-choose-item-icon {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  
+    .why-choose-item-content h3 {
+      font-size: 20px;
+    }
+  
+    .why-choose-item-content p {
+      font-size: 14px;
+    }
+  }

@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   name: "Haseeb Nazeer",
   email: "haseeb.nazeer@gmail.com",
-  phone: "+92 345 1267728",
+  phone: "+923120408900",
   position: "Senior Mathematics Teacher",
   experience: "10 Years",
   experience_detail:

@@ -1,4 +1,3 @@
-import React from "react";
 import PageHeader from "../components/PageHeader";
 import UK_Details from "../components/UK_Details";
 import { useLocation } from "react-router-dom";

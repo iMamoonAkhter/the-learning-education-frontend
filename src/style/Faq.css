@@ -7,4 +7,6 @@
     color: #000 !important; /* Ensuring text is visible */
     border: 1px solid #ddd; /* Optional: adds a subtle border */
   }
-  
+  .collapse {
+    visibility: visible !important;
+  }

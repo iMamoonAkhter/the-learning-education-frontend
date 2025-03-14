@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
 import shoot from "/images/shoot.png";
+import { useSelector } from "react-redux";
 
 const US_International_Details = () => {
+  const teacher = useSelector((state) => state.teacher);
+
   return (
     <div>
       <section className="bg-white dark:bg-gray-900">
@@ -37,9 +39,15 @@ const US_International_Details = () => {
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> Any 2 Weekdays*</li>
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> 8 Classes per-month</li>
               </ul>
-              <Link style={{textDecoration: "none"}} to="/free-trial" className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5">
+              <a
+                href={`https://wa.me/${teacher.phone}?text=Hello%20I%20am%20interested%20in%20a%20free%20trial%20for%20your%20tutoring%20services.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5"
+              >
                 Get Free Trial
-              </Link>
+              </a>
             </div>
 
             {/* 3 Days / Week */}
@@ -59,9 +67,15 @@ const US_International_Details = () => {
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> Any 3 Weekdays*</li>
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> 12 Classes per-month</li>
               </ul>
-              <Link style={{textDecoration: "none"}} to="/free-trial" className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5">
+              <a
+                href={`https://wa.me/${teacher.phone}?text=Hello%20I%20am%20interested%20in%20a%20free%20trial%20for%20your%20tutoring%20services.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5"
+              >
                 Get Free Trial
-              </Link>
+              </a>
             </div>
 
             {/* 5 Days / Week */}
@@ -81,9 +95,15 @@ const US_International_Details = () => {
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> Monday-Friday</li>
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> 22 Classes per-month</li>
               </ul>
-              <Link style={{textDecoration: "none"}} to="/free-trial" className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5">
+              <a
+                href={`https://wa.me/${teacher.phone}?text=Hello%20I%20am%20interested%20in%20a%20free%20trial%20for%20your%20tutoring%20services.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5"
+              >
                 Get Free Trial
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -109,9 +129,15 @@ const US_International_Details = () => {
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> Any 2 Weekdays*</li>
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> 8 Classes per-month</li>
               </ul>
-              <Link style={{textDecoration: "none"}} to="/free-trial" className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5">
+              <a
+                href={`https://wa.me/${teacher.phone}?text=Hello%20I%20am%20interested%20in%20a%20free%20trial%20for%20your%20tutoring%20services.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5"
+              >
                 Get Free Trial
-              </Link>
+              </a>
             </div>
 
             {/* 3 Days / Week */}
@@ -131,9 +157,15 @@ const US_International_Details = () => {
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> Any 3 Weekdays*</li>
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> 12 Classes per-month</li>
               </ul>
-              <Link style={{textDecoration: "none"}} to="/free-trial" className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5">
+              <a
+                href={`https://wa.me/${teacher.phone}?text=Hello%20I%20am%20interested%20in%20a%20free%20trial%20for%20your%20tutoring%20services.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5"
+              >
                 Get Free Trial
-              </Link>
+              </a>
             </div>
 
             {/* 5 Days / Week */}
@@ -153,9 +185,15 @@ const US_International_Details = () => {
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> Monday-Friday</li>
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> 22 Classes per-month</li>
               </ul>
-              <Link style={{textDecoration: "none"}} to="/free-trial" className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5">
+              <a
+                href={`https://wa.me/${teacher.phone}?text=Hello%20I%20am%20interested%20in%20a%20free%20trial%20for%20your%20tutoring%20services.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5"
+              >
                 Get Free Trial
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -181,9 +219,15 @@ const US_International_Details = () => {
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> Any 2 Weekdays*</li>
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> 8 Classes per-month</li>
               </ul>
-              <Link style={{textDecoration: "none"}} to="/free-trial" className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5">
+              <a
+                href={`https://wa.me/${teacher.phone}?text=Hello%20I%20am%20interested%20in%20a%20free%20trial%20for%20your%20tutoring%20services.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5"
+              >
                 Get Free Trial
-              </Link>
+              </a>
             </div>
 
             {/* 3 Days / Week */}
@@ -203,9 +247,15 @@ const US_International_Details = () => {
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> Any 3 Weekdays*</li>
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> 12 Classes per-month</li>
               </ul>
-              <Link style={{textDecoration: "none"}} to="/free-trial" className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5">
+              <a
+                href={`https://wa.me/${teacher.phone}?text=Hello%20I%20am%20interested%20in%20a%20free%20trial%20for%20your%20tutoring%20services.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5"
+              >
                 Get Free Trial
-              </Link>
+              </a>
             </div>
 
             {/* 5 Days / Week */}
@@ -225,9 +275,15 @@ const US_International_Details = () => {
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> Monday-Friday</li>
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> 22 Classes per-month</li>
               </ul>
-              <Link style={{textDecoration: "none"}} to="/free-trial" className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5">
+              <a
+                href={`https://wa.me/${teacher.phone}?text=Hello%20I%20am%20interested%20in%20a%20free%20trial%20for%20your%20tutoring%20services.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5"
+              >
                 Get Free Trial
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -253,9 +309,15 @@ const US_International_Details = () => {
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> Any 2 Weekdays*</li>
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> 8 Classes per-month</li>
               </ul>
-              <Link style={{textDecoration: "none"}} to="/free-trial" className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5">
+              <a
+                href={`https://wa.me/${teacher.phone}?text=Hello%20I%20am%20interested%20in%20a%20free%20trial%20for%20your%20tutoring%20services.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5"
+              >
                 Get Free Trial
-              </Link>
+              </a>
             </div>
 
             {/* 3 Days / Week */}
@@ -275,9 +337,15 @@ const US_International_Details = () => {
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> Any 3 Weekdays*</li>
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> 12 Classes per-month</li>
               </ul>
-              <Link style={{textDecoration: "none"}} to="/free-trial" className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5">
+              <a
+                href={`https://wa.me/${teacher.phone}?text=Hello%20I%20am%20interested%20in%20a%20free%20trial%20for%20your%20tutoring%20services.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5"
+              >
                 Get Free Trial
-              </Link>
+              </a>
             </div>
 
             {/* 5 Days / Week */}
@@ -297,9 +365,15 @@ const US_International_Details = () => {
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> Monday-Friday</li>
                 <li className="list-item d-flex"><img src={shoot} style={{marginRight: "5px"}} alt="Checkmark icon" width="30" /> 22 Classes per-month</li>
               </ul>
-              <Link style={{textDecoration: "none"}} to="/free-trial" className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5">
+              <a
+                href={`https://wa.me/${teacher.phone}?text=Hello%20I%20am%20interested%20in%20a%20free%20trial%20for%20your%20tutoring%20services.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5"
+              >
                 Get Free Trial
-              </Link>
+              </a>
             </div>
           </div>
         </div>

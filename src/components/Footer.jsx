@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const teacher = useSelector((state) => state.teacher);
-
+  const tutoring = useSelector((state) => state.tutoring);
   return (
     <>
       <footer className="wpo-site-footer">
@@ -14,13 +14,11 @@ const Footer = () => {
                 <div className="widget about-widget">
                   <div className="logo widget-title">
                     <Link className="navbar-brand" to="/">
-                      <img src="/images/logo-s2.svg" alt="Eduko Logo" />
+                      <img src="/images/logo-s2.svg" alt={tutoring.service_name} />
                     </Link>
                   </div>
                   <p>
-                    Mattis inelit neque quis donec eleifend amet. Amet sed et
-                    cursus eu euismod. Egestas in morbi tristique ornare
-                    vulputate vitae enim.
+                  Empowering students worldwide with personalized learning for over 5 years. At Mathedemic, our expert tutors specialize in Mathematics, Science, and Test Preparation (SAT, ACT, GCSE, A-Level, IB, NAPLAN). Join us for tailored academic support and proven results.
                   </p>
                   <div className="social">
                     <ul>
@@ -78,7 +76,7 @@ const Footer = () => {
                   </div>
                   <ul>
                     <li>
-                      <Link to="/testimonial">Testimonials</Link>
+                      <Link to="/terms-and-condition">Terms & Condition</Link>
                     </li>
                     <li>
                       <Link to="/why-choose-us">Why Choose Us</Link>
@@ -125,7 +123,7 @@ const Footer = () => {
               <div className="col col-lg-6 col-md-12">
                 <ul>
                   <li>
-                    &copy; 2023 <Link to="/">Eduko</Link>. All rights reserved.
+                    &copy; 2023 <Link to="/">{tutoring.service_name}</Link>. All rights reserved.
                   </li>
                 </ul>
               </div>

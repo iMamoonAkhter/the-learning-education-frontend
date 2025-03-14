@@ -172,37 +172,37 @@ const FAQ = () => {
             </div>
             <div className="col-lg-8 offset-lg-2">
               <div className="wpo-faq-section">
-                <div className="accordion" id="accordionExample">
-                  {FAQ_Question.map((item) => (
-                    <div className="accordion-item" key={item.id}>
-                      <h3 className="accordion-header" id={`heading${item.id}`}>
-                        <button
-                          className="accordion-button" type="button"
-                          data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                          aria-expanded="true" aria-controls="collapseOne"
-                          onClick={() => handleTextToggle(item.id)}
-                        >
-                          {item.question}
-                          
-                        </button>
-                      </h3>
-                      <div
-                        id={`collapse${item.id}`}
-                        className={`accordion-collapse collapse ${
-                          activeId === item.id ? "show" : ""
-                        }`}
-                        aria-labelledby={`heading${item.id}`}
-                        data-bs-parent="#accordionExample"
-                      >
-                        <div className="accordion-body">
-                          <p>{item.answer}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-
-                  {/* Add more FAQ items as needed */}
-                </div>
+              <div className="accordion" id="accordionExample">
+  {FAQ_Question.map((item) => (
+    <div className="accordion-item" key={item.id}>
+      <h3 className="accordion-header" id={`heading${item.id}`}>
+        <button
+          className="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target={`#collapse${item.id}`} // Match the ID of the answer div
+          aria-expanded={activeId === item.id ? "true" : "false"} // Set aria-expanded dynamically
+          aria-controls={`collapse${item.id}`} // Match the ID of the answer div
+          onClick={() => handleTextToggle(item.id)}
+        >
+          {item.question}
+        </button>
+      </h3>
+      <div
+        id={`collapse${item.id}`} // Unique ID for each answer div
+        className={`accordion-collapse collapse ${
+          activeId === item.id ? "show" : ""
+        }`}
+        aria-labelledby={`heading${item.id}`}
+        data-bs-parent="#accordionExample"
+      >
+        <div className="accordion-body">
+          <p>{item.answer}</p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  service_name: "Eden Service"
+  service_name: "Mathedemic"
 
 };
 

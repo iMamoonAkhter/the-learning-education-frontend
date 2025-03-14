@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import "../style/Service.css"
 const Services = () => {
   const teacher = useSelector((state) => state.teacher);
-
+  const tutoring = useSelector((state) => state.tutoring);
   return (
     <>
       <PageHeader title={"Services"} />
@@ -40,7 +40,7 @@ const Services = () => {
                         <div className="wpo-course-content">
                           <h2>Empowering Students Through Personalized Education</h2>
                           <p>
-                            At <b>[Your Tutoring Service Name]</b>, we believe in unlocking every student's potential through tailored educational support.
+                            At <b>{tutoring.service_name}</b>, we believe in unlocking every student's potential through tailored educational support.
                             Our goal is to provide the right guidance and resources to help students excel academically while fostering a passion for learning.
                           </p>
 
