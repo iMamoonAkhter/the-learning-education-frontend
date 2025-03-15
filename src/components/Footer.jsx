@@ -4,13 +4,15 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const teacher = useSelector((state) => state.teacher);
   const tutoring = useSelector((state) => state.tutoring);
+
   return (
     <>
       <footer className="wpo-site-footer">
         <div className="wpo-upper-footer">
           <div className="container">
             <div className="row">
-              <div className="col col-lg-3 col-md-6 col-sm-12">
+              {/* About Section */}
+              <div className="col-12 col-md-6 col-lg-3">
                 <div className="widget about-widget">
                   <div className="logo widget-title">
                     <Link className="navbar-brand" to="/">
@@ -18,7 +20,10 @@ const Footer = () => {
                     </Link>
                   </div>
                   <p>
-                  Empowering students worldwide with personalized learning for over 5 years. At Mathedemic, our expert tutors specialize in Mathematics, Science, and Test Preparation (SAT, ACT, GCSE, A-Level, IB, NAPLAN). Join us for tailored academic support and proven results.
+                    Empowering students worldwide with personalized learning for over 5 years. At
+                    Mathedemic, our expert tutors specialize in Mathematics, Science, and Test
+                    Preparation (SAT, ACT, GCSE, A-Level, IB, NAPLAN). Join us for tailored academic
+                    support and proven results.
                   </p>
                   <div className="social">
                     <ul>
@@ -47,7 +52,8 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="col col-lg-3 col-md-6 col-sm-12">
+              {/* Quick Links Section */}
+              <div className="col-12 col-md-6 col-lg-3">
                 <div className="widget link-widget">
                   <div className="widget-title">
                     <h3>Quick Links</h3>
@@ -69,7 +75,8 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="col col-lg-3 col-md-6 col-sm-12">
+              {/* Useful Links Section */}
+              <div className="col-12 col-md-6 col-lg-3">
                 <div className="widget link-widget s2">
                   <div className="widget-title">
                     <h3>Useful Links</h3>
@@ -91,7 +98,8 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="col col-lg-3 col-md-6 col-sm-12">
+              {/* Contact Section */}
+              <div className="col-12 col-md-6 col-lg-3">
                 <div className="widget wpo-contact-widget">
                   <div className="widget-title">
                     <h3>Contact Us</h3>
@@ -120,14 +128,14 @@ const Footer = () => {
         <div className="wpo-lower-footer">
           <div className="container">
             <div className="row align-items-center">
-              <div className="col col-lg-6 col-md-12">
+              <div className="col-12 col-md-6">
                 <ul>
                   <li>
                     &copy; 2023 <Link to="/">{tutoring.service_name}</Link>. All rights reserved.
                   </li>
                 </ul>
               </div>
-              <div className="col col-lg-6 col-md-12">
+              <div className="col-12 col-md-6">
                 <div className="link">
                   <ul>
                     <li>
