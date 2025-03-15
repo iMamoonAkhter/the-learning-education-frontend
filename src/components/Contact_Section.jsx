@@ -29,7 +29,7 @@ const Contact = () => {
     const toastId = toast.info("Sending message...", { autoClose: false });
   
     try {
-      const response = await fetch("http://localhost:8000/api/v1/users/nodemailer", {
+      const response = await fetch("https://the-learning-education-backend.vercel.app/api/v1/users/nodemailer", {
         method: "POST",
         body: JSON.stringify(values),
         headers: {
