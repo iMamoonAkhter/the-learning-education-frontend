@@ -1,18 +1,18 @@
 import { useState } from "react";
-import * as Yup from "yup";
+import * as yup from "yup";
 import { useFormik } from "formik";
 import axios from "axios";
 import { toast } from "react-toastify";
 import PageHeader from "../components/PageHeader";
 import "../style/Faq.css"
-const validationSchema = Yup.object({
-  name: Yup.string().min(3, "Too short").required("Name is required"),
-  email: Yup.string().email("Invalid email").required("Email is required"),
-  phone: Yup.string()
+const validationSchema = yup.object({
+  name: yup.string().min(3, "Too short").required("Name is required"),
+  email: yup.string().email("Invalid email").required("Email is required"),
+  phone: yup.string()
     .matches(/^\d{10,15}$/, "Invalid phone number")
     .required("Phone is required"),
-  service: Yup.string().required("Please select a subject"),
-  message: Yup.string()
+  service: yup.string().required("Please select a subject"),
+  message: yup.string()
     .min(10, "Message too short")
     .required("Message is required"),
 });
@@ -120,7 +120,7 @@ const FAQ = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/v1/users/nodemailer",
+        "https://the-learning-education-backend.vercel.app/api/v1/users/nodemailer",
         values
       );
       if (response.status === 200) {
