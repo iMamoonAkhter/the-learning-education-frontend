@@ -18,12 +18,13 @@ const validationSchema = Yup.object({
   });
 
 const Teacher_Detail = () => {
+  const API = import.meta.env.VITE_API_URL;
   const teacher = useSelector((state) => state.teacher);
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     const toastId = toast.info("Sending message...", { autoClose: false });
     try {
       const response = await axios.post(
-        "https://the-learning-education-backend.vercel.app/api/v1/users/nodemailer",
+        `${API}/v1/users/nodemailer`,
         values
       );
       if (response.status === 200) {

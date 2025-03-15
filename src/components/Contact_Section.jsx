@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 const Contact = () => {
   const [loading, setLoading] = useState(false);
   const teacher = useSelector((state) => state.teacher);
-
+  const API = import.meta.env.VITE_API_URL;
   // Validation Schema using Yup
   const validationSchema = Yup.object({
     name: Yup.string().min(3, "Too short").required("Name is required"),
@@ -29,7 +29,7 @@ const Contact = () => {
     const toastId = toast.info("Sending message...", { autoClose: false });
   
     try {
-      const response = await fetch("https://the-learning-education-backend.vercel.app/api/v1/users/nodemailer", {
+      const response = await fetch(`${API}/v1/users/nodemailer`, {
         method: "POST",
         body: JSON.stringify(values),
         headers: {

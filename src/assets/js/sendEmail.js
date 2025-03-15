@@ -1,7 +1,7 @@
 // Function to handle form submission
 document.getElementById("contact-form-main").addEventListener("submit", async function (event) {
     event.preventDefault(); // Prevent the form from reloading
-
+    let API = import.meta.env.VITE_API_URL;
     // Capture form data
     let params = {
         name: document.getElementById('name').value,
@@ -16,7 +16,7 @@ document.getElementById("contact-form-main").addEventListener("submit", async fu
 
     try {
         // Send the form data to the server
-        const res = await fetch('http://localhost:8000/api/v1/users/nodemailer', {
+        const res = await fetch(`${API}/v1/users/nodemailer`, {
             method: 'POST',
             body: JSON.stringify(params),
             headers: {

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import slider1 from "/images/slider/1.png";
 import client1 from "/images/slider/client1.png"
 import client2 from "/images/slider/client2.png"
@@ -13,8 +12,9 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "../style/Homehero.css"
 import { Avatar, AvatarGroup } from "@mui/joy";
+import { useSelector } from "react-redux";
 const HomeHero = () => {
-
+    const teacher = useSelector((state) => state.teacher.teacher);
   return (
     <div className="page-wrapper">
         <section className="static-hero">
@@ -43,7 +43,15 @@ const HomeHero = () => {
                             </div>
                             <div className="clearfix"></div>
                             <div data-swiper-parallax="500" className="slide-btns">
-                                <Link to="about.html" className="theme-btn">Book a Free Trial Lesson</Link>
+                            <a
+                                href={`https://wa.me/${teacher.phone}?text=Hello%20I%20am%20interested%20in%20a%20free%20trial%20for%20your%20tutoring%20services.`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ textDecoration: "none" }}
+                                className="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center mt-5"
+                            >
+                                Get Free Trial
+                            </a>
                                  {/* <ul>
                                     <li className="video-holder">
                                         <a href="https://www.youtube.com/embed/r5sw-6lJmTA?autoplay=1" className="video-btn"
