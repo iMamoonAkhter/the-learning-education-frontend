@@ -2064,7 +2064,7 @@ img {
 
 @media (max-width: 991px) {
   .wpo-site-header .navbar-collapse.collapse {
-    display: none;
+    display: block;
   }
   .wpo-site-header .navbar-collapse.collapse.in {
     display: block;

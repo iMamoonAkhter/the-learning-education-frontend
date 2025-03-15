@@ -14,7 +14,7 @@ import "../style/Homehero.css"
 import { Avatar, AvatarGroup } from "@mui/joy";
 import { useSelector } from "react-redux";
 const HomeHero = () => {
-    const teacher = useSelector((state) => state.teacher.teacher);
+    const teacher = useSelector((state) => state.teacher);
   return (
     <div className="page-wrapper">
         <section className="static-hero">
