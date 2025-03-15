@@ -1,18 +1,18 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as yup from "yup";
+import * as Yup from "yup";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "../assets/sass/style.css";
 import teacher_pic from "/images/teacher.png";
 import { useSelector } from "react-redux";
-const validationSchema = yup.object({
-    name: yup.string().min(3, "Too short").required("Name is required"),
-    email: yup.string().email("Invalid email").required("Email is required"),
-    phone: yup.string()
+const validationSchema = Yup.object({
+    name: Yup.string().min(3, "Too short").required("Name is required"),
+    email: Yup.string().email("Invalid email").required("Email is required"),
+    phone: Yup.string()
       .matches(/^\d{10,15}$/, "Invalid phone number")
       .required("Phone is required"),
-    service: yup.string().required("Please select a subject"),
-    message: yup.string()
+    service: Yup.string().required("Please select a subject"),
+    message: Yup.string()
       .min(10, "Message too short")
       .required("Message is required"),
   });

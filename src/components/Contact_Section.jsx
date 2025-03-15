@@ -1,5 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as yup from "yup";
+import * as Yup from "yup";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,16 +10,14 @@ const Contact = () => {
   const teacher = useSelector((state) => state.teacher);
 
   // Validation Schema using Yup
-  const validationSchema = yup.object({
-    name: yup.string().min(3, "Too short").required("Name is required"),
-    email: yup.string().email("Invalid email").required("Email is required"),
-    phone: yup.string()
+  const validationSchema = Yup.object({
+    name: Yup.string().min(3, "Too short").required("Name is required"),
+    email: Yup.string().email("Invalid email").required("Email is required"),
+    phone: Yup.string()
       .matches(/^\d{10,15}$/, "Invalid phone number")
       .required("Phone is required"),
-    service: yup.string().required("Please select a subject"),
-    message: yup.string()
-      .min(10, "Message too short")
-      .required("Message is required"),
+    service: Yup.string().required("Please select a subject"),
+    message: Yup.string().min(10, "Message too short").required("Message is required"),
   });
 
   // Handle Form Submission
