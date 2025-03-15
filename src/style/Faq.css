@@ -11,14 +11,4 @@
     visibility: visible !important;
   }
 
-  .accordion-button:not(.collapsed)::after {
-    content: "-"; /* Expanded sign */
-  }
-
-  /* Customize the accordion button signs */
-.accordion-button::after {
-  content: "+"; /* Default sign */
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
+  

@@ -99,6 +99,7 @@ const FAQ_Question = [
       "Yes, our tutors are experienced in adapting their teaching methods to support children with diverse learning needs. We work closely with parents to ensure that our approach aligns with any specific requirements or accommodations.",
   },
 ];
+
 const FAQ = () => {
   // Validation Schema using Yup
   const validationSchema = Yup.object({
@@ -173,7 +174,7 @@ const FAQ = () => {
                     <div className="accordion-item" key={item.id}>
                       <h3 className="accordion-header" id={`heading${item.id}`}>
                         <button
-                          className="accordion-button"
+                          className="accordion-button d-flex justify-content-between align-items-center"
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target={`#collapse${item.id}`}
@@ -181,7 +182,7 @@ const FAQ = () => {
                           aria-controls={`collapse${item.id}`}
                           onClick={() => handleTextToggle(item.id)}
                         >
-                          {item.question}
+                          <span>{item.question}</span>
                         </button>
                       </h3>
                       <div
