@@ -4,8 +4,7 @@ import { useFormik } from "formik";
 import axios from "axios";
 import { toast } from "react-toastify";
 import PageHeader from "../components/PageHeader";
-import "../style/Faq.css"
-
+import "../style/Faq.css";
 
 const FAQ_Question = [
   {
@@ -101,18 +100,25 @@ const FAQ_Question = [
   },
 ];
 
-
-
 const FAQ = () => {
-  const API = import.meta.env.REACT_APP_API_URL;
+  // Validation Schema using Yup
+  const validationSchema = Yup.object({
+    name: Yup.string().min(3, "Too short").required("Name is required"),
+    email: Yup.string().email("Invalid email").required("Email is required"),
+    phone: Yup.string()
+      .matches(/^\d{10,15}$/, "Invalid phone number")
+      .required("Phone is required"),
+    service: Yup.string().required("Please select a subject"),
+    message: Yup.string().min(10, "Message too short").required("Message is required"),
+  });
+
+  const API = import.meta.env.VITE_API_URL; // Use VITE_ prefix for Vite
+
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     const toastId = toast.info("Sending message...", { autoClose: false });
 
     try {
-      const response = await axios.post(
-        `${API}/v1/users/nodemailer`,
-        values
-      );
+      const response = await axios.post(`${API}/v1/users/nodemailer`, values);
       if (response.status === 200) {
         toast.update(toastId, {
           render: "Appointment booked successfully.",
@@ -140,6 +146,7 @@ const FAQ = () => {
       service: "",
       message: "",
     },
+    validationSchema: validationSchema, // Add validation schema here
     onSubmit: handleSubmit,
   });
 
@@ -161,37 +168,37 @@ const FAQ = () => {
             </div>
             <div className="col-lg-8 offset-lg-2">
               <div className="wpo-faq-section">
-              <div className="accordion" id="accordionExample">
-  {FAQ_Question.map((item) => (
-    <div className="accordion-item" key={item.id}>
-      <h3 className="accordion-header" id={`heading${item.id}`}>
-        <button
-          className="accordion-button"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target={`#collapse${item.id}`} // Match the ID of the answer div
-          aria-expanded={activeId === item.id ? "true" : "false"} // Set aria-expanded dynamically
-          aria-controls={`collapse${item.id}`} // Match the ID of the answer div
-          onClick={() => handleTextToggle(item.id)}
-        >
-          {item.question}
-        </button>
-      </h3>
-      <div
-        id={`collapse${item.id}`} // Unique ID for each answer div
-        className={`accordion-collapse collapse ${
-          activeId === item.id ? "show" : ""
-        }`}
-        aria-labelledby={`heading${item.id}`}
-        data-bs-parent="#accordionExample"
-      >
-        <div className="accordion-body">
-          <p>{item.answer}</p>
-        </div>
-      </div>
-    </div>
-  ))}
-</div>
+                <div className="accordion" id="accordionExample">
+                  {FAQ_Question.map((item) => (
+                    <div className="accordion-item" key={item.id}>
+                      <h3 className="accordion-header" id={`heading${item.id}`}>
+                        <button
+                          className="accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target={`#collapse${item.id}`}
+                          aria-expanded={activeId === item.id ? "true" : "false"}
+                          aria-controls={`collapse${item.id}`}
+                          onClick={() => handleTextToggle(item.id)}
+                        >
+                          {item.question}
+                        </button>
+                      </h3>
+                      <div
+                        id={`collapse${item.id}`}
+                        className={`accordion-collapse collapse ${
+                          activeId === item.id ? "show" : ""
+                        }`}
+                        aria-labelledby={`heading${item.id}`}
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div className="accordion-body">
+                          <p>{item.answer}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -224,8 +231,9 @@ const FAQ = () => {
                       placeholder="Your Name"
                       value={formik.values.name}
                       onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
                     />
-                    {formik.errors.name && (
+                    {formik.touched.name && formik.errors.name && (
                       <small className="text-danger">
                         {formik.errors.name}
                       </small>
@@ -239,8 +247,9 @@ const FAQ = () => {
                       placeholder="Email Address"
                       value={formik.values.email}
                       onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
                     />
-                    {formik.errors.email && (
+                    {formik.touched.email && formik.errors.email && (
                       <small className="text-danger">
                         {formik.errors.email}
                       </small>
@@ -254,8 +263,9 @@ const FAQ = () => {
                       placeholder="Phone Number"
                       value={formik.values.phone}
                       onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
                     />
-                    {formik.errors.phone && (
+                    {formik.touched.phone && formik.errors.phone && (
                       <small className="text-danger">
                         {formik.errors.phone}
                       </small>
@@ -269,8 +279,9 @@ const FAQ = () => {
                       placeholder="Subject"
                       value={formik.values.service}
                       onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
                     />
-                    {formik.errors.service && (
+                    {formik.touched.service && formik.errors.service && (
                       <small className="text-danger">
                         {formik.errors.service}
                       </small>
@@ -283,8 +294,9 @@ const FAQ = () => {
                       placeholder="Your Question"
                       value={formik.values.message}
                       onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
                     />
-                    {formik.errors.message && (
+                    {formik.touched.message && formik.errors.message && (
                       <small className="text-danger">
                         {formik.errors.message}
                       </small>
