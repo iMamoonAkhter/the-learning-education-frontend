@@ -5,17 +5,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import PageHeader from "../components/PageHeader";
 import "../style/Faq.css"
-const validationSchema = Yup.object().shape({
-  name: Yup.string().min(3, "Too short").required("Name is required"),
-  email: Yup.string().email("Invalid email").required("Email is required"),
-  phone: Yup.string()
-    .matches(/^\d{10,15}$/, "Invalid phone number")
-    .required("Phone is required"),
-  service: Yup.string().required("Please select a subject"),
-  message: Yup.string()
-    .min(10, "Message too short")
-    .required("Message is required"),
-});
+
 
 const FAQ_Question = [
   {
@@ -150,7 +140,6 @@ const FAQ = () => {
       service: "",
       message: "",
     },
-    validationSchema,
     onSubmit: handleSubmit,
   });
 
