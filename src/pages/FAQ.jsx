@@ -99,10 +99,9 @@ const FAQ_Question = [
       "Yes, our tutors are experienced in adapting their teaching methods to support children with diverse learning needs. We work closely with parents to ensure that our approach aligns with any specific requirements or accommodations.",
   },
 ];
-
 const FAQ = () => {
   // Validation Schema using Yup
-  const validationSchema = Yup.object().shape({
+  const validationSchema = Yup.object({
     name: Yup.string().min(3, "Too short").required("Name is required"),
     email: Yup.string().email("Invalid email").required("Email is required"),
     phone: Yup.string()
@@ -151,6 +150,7 @@ const FAQ = () => {
   });
 
   const [activeId, setActiveId] = useState(null);
+
   const handleTextToggle = (id) => {
     setActiveId((prevId) => (prevId === id ? null : id));
   };

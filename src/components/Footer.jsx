@@ -5,6 +5,11 @@ const Footer = () => {
   const teacher = useSelector((state) => state.teacher);
   const tutoring = useSelector((state) => state.tutoring);
 
+  // Function to scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to the top
+  };
+
   return (
     <>
       <footer className="wpo-site-footer">
@@ -15,7 +20,7 @@ const Footer = () => {
               <div className="col-12 col-md-6 col-lg-3">
                 <div className="widget about-widget">
                   <div className="logo widget-title">
-                    <Link className="navbar-brand" to="/">
+                    <Link className="navbar-brand" to="/" onClick={scrollToTop}>
                       <img src="/images/logo-s2.svg" alt={tutoring.service_name} />
                     </Link>
                   </div>
@@ -60,16 +65,24 @@ const Footer = () => {
                   </div>
                   <ul>
                     <li>
-                      <Link to="/">Home</Link>
+                      <Link to="/" onClick={scrollToTop}>
+                        Home
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/about">About Us</Link>
+                      <Link to="/about" onClick={scrollToTop}>
+                        About Us
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/contact">Contact Us</Link>
+                      <Link to="/contact" onClick={scrollToTop}>
+                        Contact Us
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/services">Services</Link>
+                      <Link to="/services" onClick={scrollToTop}>
+                        Services
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -83,16 +96,24 @@ const Footer = () => {
                   </div>
                   <ul>
                     <li>
-                      <Link to="/terms-and-condition">Terms & Condition</Link>
+                      <Link to="/terms-and-condition" onClick={scrollToTop}>
+                        Terms & Condition
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/why-choose-us">Why Choose Us</Link>
+                      <Link to="/why-choose-us" onClick={scrollToTop}>
+                        Why Choose Us
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/teacher-details">Teacher</Link>
+                      <Link to="/teacher-details" onClick={scrollToTop}>
+                        Teacher
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/faq">FAQ</Link>
+                      <Link to="/faq" onClick={scrollToTop}>
+                        FAQ
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -131,7 +152,7 @@ const Footer = () => {
               <div className="col-12 col-md-6">
                 <ul>
                   <li>
-                    &copy; 2023 <Link to="/">{tutoring.service_name}</Link>. All rights reserved.
+                    &copy; 2023 <Link to="/" onClick={scrollToTop}>{tutoring.service_name}</Link>. All rights reserved.
                   </li>
                 </ul>
               </div>
@@ -139,10 +160,14 @@ const Footer = () => {
                 <div className="link">
                   <ul>
                     <li>
-                      <Link to="/about">About us</Link>
+                      <Link to="/about" onClick={scrollToTop}>
+                        About us
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/faq">FAQ</Link>
+                      <Link to="/faq" onClick={scrollToTop}>
+                        FAQ
+                      </Link>
                     </li>
                   </ul>
                 </div>
