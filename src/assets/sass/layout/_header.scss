@@ -409,9 +409,7 @@
 }
 
 @media (max-width: 991px) {
-	.wpo-site-header .navbar-collapse.collapse {
-		display: none;
-	}
+	
 
 	.wpo-site-header .navbar-collapse.collapse.in {
 		display: block;
@@ -1359,9 +1357,7 @@
 
 	/*navbar collaps less then 992px*/
 	@include media-query (991px) {
-		.navbar-collapse.collapse {
-			display: none;
-		}
+		
 
 		.navbar-collapse.collapse.in {
 			display: block;

@@ -2063,8 +2063,8 @@ img {
 }
 
 @media (max-width: 991px) {
-  .wpo-site-header .navbar-collapse.collapse {
-    display: block;
+  .wpo-site-header .collapse {
+    display: none;
   }
   .wpo-site-header .navbar-collapse.collapse.in {
     display: block;
@@ -2124,6 +2124,28 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+/* Ensure navbar is visible on desktop */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important; /* Force display on desktop */
+    flex-basis: auto;
+  }
+}
+
+/* Ensure navbar toggler works on mobile */
+.navbar-toggler {
+  display: block; /* Show toggler on mobile */
+}
+
+/* Ensure dropdown menu is visible when toggled */
+.navbar-nav .dropdown-menu {
+  display: none; /* Hide by default */
+}
+
+.navbar-nav .dropdown-menu.show {
+  display: block; /* Show when toggled */
 }
 
 @media (max-width: 991px) {
@@ -2989,9 +3011,7 @@ img {
 }
 
 @media (max-width: 991px) {
-  .wpo-site-header .navbar-collapse.collapse {
-    display: none;
-  }
+ 
   .wpo-site-header .navbar-collapse.collapse.in {
     display: block;
   }

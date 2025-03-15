@@ -1,7 +1,7 @@
 import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import NavbarComponent from "../components/Navbar";
 // Import Pages (Lazy Loading for Performance)
 const Home = lazy(() => import("../pages/Home"));
 const About = lazy(() => import("../pages/About"));
@@ -17,7 +17,7 @@ const WhyChoose = lazy(()=> import("../pages/Why_Choose_Us"))
 const AppRoutes = () => {
   return (
     <>
-      <Navbar />
+      <NavbarComponent />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
