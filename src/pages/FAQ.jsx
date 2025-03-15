@@ -102,7 +102,7 @@ const FAQ_Question = [
 
 const FAQ = () => {
   // Validation Schema using Yup
-  const validationSchema = Yup.object({
+  const validationSchema = Yup.object().shape({
     name: Yup.string().min(3, "Too short").required("Name is required"),
     email: Yup.string().email("Invalid email").required("Email is required"),
     phone: Yup.string()
