@@ -154,9 +154,10 @@ const Contact = () => {
                     <div>
                       <Field as="select" name="service" className="form-control">
                         <option value="" disabled>Subject</option>
-                        <option value="Web Development">Web Development</option>
-                        <option value="Web Design">Web Design</option>
-                        <option value="Marketing">Marketing</option>
+                        <option value="English">English</option>
+                        <option value="Science">Science</option>
+                        <option value="Math">Math</option>
+                        <option value="Test Prep">Test Prep</option>
                       </Field>
                       <ErrorMessage name="service" component="div" className="error-message" />
                     </div>
