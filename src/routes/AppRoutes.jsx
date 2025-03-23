@@ -14,6 +14,9 @@ const Services = lazy(() => import("../pages/Services"));
 const TermsCondition = lazy(() => import("../pages/Terms_And_Condition"));
 const Fee_Structure = lazy(()=> import("../pages/Fee_Structure"))
 const WhyChoose = lazy(()=> import("../pages/Why_Choose_Us"))
+const Mathematics = lazy(()=> import("../pages/Mathematics"))
+const English = lazy(()=> import("../pages/English"))
+const Science = lazy(()=> import("../pages/Science"))
 const AppRoutes = () => {
   return (
     <>
@@ -30,6 +33,9 @@ const AppRoutes = () => {
         <Route path="/uk-fee-structure" element={<Fee_Structure />} />
         <Route path="/us-international-fee-structure" element={<Fee_Structure />} />
         <Route path="/why-choose-us" element={<WhyChoose />} />
+        <Route path="/course/mathematics" element={<Mathematics />} />
+        <Route path="/course/english" element={<English />} />
+        <Route path="/course/science" element={<Science />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

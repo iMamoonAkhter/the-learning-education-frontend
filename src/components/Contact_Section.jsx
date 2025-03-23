@@ -24,7 +24,6 @@ const Contact = () => {
   const handleSubmit = async (values, { resetForm }) => {
     setLoading(true);
     
-  
     // Show an info toast with a unique ID
     const toastId = toast.info("Sending message...", { autoClose: false });
   
@@ -64,55 +63,60 @@ const Contact = () => {
     }
   };
   
+  // Build the WhatsApp URL using the teacher's phone number.
+  const whatsappUrl = `https://wa.me/${teacher.phone}`;
 
   return (
     <section className="wpo-contact-pg-section section-padding">
       <div className="container">
         <div className="row">
           <div className="col col-lg-10 offset-lg-1">
-          <div className="office-info">
-                            <div className="row">
-                                <div className="col col-xl-4 col-lg-6 col-md-6 col-12">
-                                    <div className="office-info-item">
-                                        <div className="office-info-icon">
-                                            <div className="icon">
-                                                <i className="fi flaticon-maps-and-flags"></i>
-                                            </div>
-                                        </div>
-                                        <div className="office-info-text">
-                                            <h2>Address</h2>
-                                            <p>{teacher.address}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col col-xl-4 col-lg-6 col-md-6 col-12">
-                                    <div className="office-info-item">
-                                        <div className="office-info-icon">
-                                            <div className="icon">
-                                                <i className="fi flaticon-email"></i>
-                                            </div>
-                                        </div>
-                                        <div className="office-info-text">
-                                            <h2>Email Us</h2>
-                                            <p>{teacher.email}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col col-xl-4 col-lg-6 col-md-6 col-12">
-                                    <div className="office-info-item">
-                                        <div className="office-info-icon">
-                                            <div className="icon">
-                                                <i className="fi flaticon-phone-call"></i>
-                                            </div>
-                                        </div>
-                                        <div className="office-info-text">
-                                            <h2>Call Now</h2>
-                                            <p>{teacher.phone}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <div className="office-info">
+              <div className="row">
+                <div className="col col-xl-4 col-lg-6 col-md-6 col-12">
+                  <div className="office-info-item">
+                    <div className="office-info-icon">
+                      <div className="icon">
+                        <i className="fi flaticon-maps-and-flags"></i>
+                      </div>
+                    </div>
+                    <div className="office-info-text">
+                      <h2>Address</h2>
+                      <p>{teacher.address}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col col-xl-4 col-lg-6 col-md-6 col-12">
+                  <div className="office-info-item">
+                    <div className="office-info-icon">
+                      <div className="icon">
+                        <i className="fi flaticon-email"></i>
+                      </div>
+                    </div>
+                    <div className="office-info-text">
+                      <h2>Email Us</h2>
+                      <p>{teacher.email}</p>
+                    </div>
+                  </div>
+                </div>
+                {/* Updated WhatsApp Section */}
+                <div className="col col-xl-4 col-lg-6 col-md-6 col-12">
+                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <div className="office-info-item">
+                      <div className="office-info-icon">
+                        <div className="icon">
+                          <i className="fi flaticon-phone-call"></i>
                         </div>
+                      </div>
+                      <div className="office-info-text">
+                        <h2>Whatsapp Now</h2>
+                        <p>{teacher.phone}</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
             <div className="wpo-contact-title">
               <h2>Have Any Questions?</h2>
               <p>Fill out the form below and we’ll get back to you.</p>

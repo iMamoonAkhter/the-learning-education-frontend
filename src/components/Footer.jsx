@@ -127,7 +127,7 @@ const Footer = () => {
                   </div>
                   <div className="contact-ft">
                     <ul>
-                      <li>
+                      <li className="text-lowercase">
                         <i className="fi flaticon-email"></i> {teacher.email}
                       </li>
                       <li>

@@ -64,7 +64,7 @@ const Make_US_Different = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-5">
+                    <div className="col-lg-4">
                         <div className="right-img">
                             <img src={choose} alt="" />
                             <Link to="https://www.youtube.com/embed/r5sw-6lJmTA?autoplay=1" className="video-btn"
