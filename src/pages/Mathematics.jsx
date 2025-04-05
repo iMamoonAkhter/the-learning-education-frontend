@@ -1,5 +1,5 @@
 import PageHeader from "../components/PageHeader"
-import mathimg from "/images/course-single.jpg"
+import mathimg from "/images/Mthedemic_Math_Tutoring_Services.png"
 import "../style/course-detail.css"
 
 const Mathematics = () => {
@@ -15,6 +15,7 @@ const Mathematics = () => {
             <img
               className="m-auto animate__animated animate__lightSpeedInRight"
               src={mathimg}
+              width={"50%"}
               alt="Mathematics Tutoring"
             />
           </div>

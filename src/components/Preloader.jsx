@@ -1,3 +1,4 @@
+import logo from "/images/LOGO/PNG/White LogoMark PNG.png"
 const Preloader = () => {
   return (
     <div className="preloader">
@@ -8,7 +9,7 @@ const Preloader = () => {
             <div className="loader-line"></div>
           </div>
           {/* Use the image path instead of import */}
-          <img src="/images/preloader.png" alt="Loading..." />
+          <img src="/images/LOGO/PNG/White LogoMark PNG.png" width={"60"} alt="Loading..." />
         </div>
       </div>
     </div>

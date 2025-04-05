@@ -17,6 +17,7 @@ const WhyChoose = lazy(()=> import("../pages/Why_Choose_Us"))
 const Mathematics = lazy(()=> import("../pages/Mathematics"))
 const English = lazy(()=> import("../pages/English"))
 const Science = lazy(()=> import("../pages/Science"))
+const Test_Preparation = lazy(()=> import("../pages/Test_Preparation"))
 const AppRoutes = () => {
   return (
     <>
@@ -36,6 +37,7 @@ const AppRoutes = () => {
         <Route path="/course/mathematics" element={<Mathematics />} />
         <Route path="/course/english" element={<English />} />
         <Route path="/course/science" element={<Science />} />
+        <Route path="/course/test-preparation" element={<Test_Preparation />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

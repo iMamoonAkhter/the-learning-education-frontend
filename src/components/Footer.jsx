@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-
+import logo from "/images/LOGO/PNG/White Logo PNG@2x.png"
 const Footer = () => {
   const teacher = useSelector((state) => state.teacher);
   const tutoring = useSelector((state) => state.tutoring);
@@ -21,7 +21,7 @@ const Footer = () => {
                 <div className="widget about-widget">
                   <div className="logo widget-title">
                     <Link className="navbar-brand" to="/" onClick={scrollToTop}>
-                      <img src="/images/logo-s2.svg" alt={tutoring.service_name} />
+                      <img src={logo} alt={tutoring.service_name} />
                     </Link>
                   </div>
                   <p>

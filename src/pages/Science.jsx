@@ -1,5 +1,5 @@
 import PageHeader from "../components/PageHeader";
-import scienceImg from "/images/course-single.jpg";
+import scienceImg from "/images/Mthedemic_Science_Tutoring_Services.png";
 import "../style/course-detail.css";
 
 const ScienceTutoring = () => {
@@ -10,7 +10,7 @@ const ScienceTutoring = () => {
             <div className="container">
                 <h2 className="title text-center mt-5 mb-5" style={{ fontWeight: "bold" }} >Science Tutoring Services</h2>
                 <div className="text-center">
-                    <img className="m-auto animate__animated animate__lightSpeedInRight" src={scienceImg} alt="" />
+                    <img className="m-auto animate__animated animate__lightSpeedInRight" src={scienceImg} width={"60%"} alt="" />
                 </div>
                 <div className="grid-container">
                     <div className="grid-item">

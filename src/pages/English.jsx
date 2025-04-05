@@ -1,5 +1,5 @@
 import PageHeader from "../components/PageHeader";
-import englishImg from "/images/course-single.jpg";
+import englishImg from "/images/Mthedemic_English_Tutoring_Services.png";
 import "../style/course-detail.css";
 
 const EnglishTutoring = () => {
@@ -12,7 +12,7 @@ const EnglishTutoring = () => {
             Comprehensive English Tutoring Services
           </h2>
           <div className="text-center">
-            <img className="m-auto animate__animated animate__lightSpeedInRight" src={englishImg} alt="English Tutoring" />
+            <img className="m-auto animate__animated animate__lightSpeedInRight" width={"60%"} src={englishImg} alt="English Tutoring" />
           </div>
           <div className="grid-container">
             {/* Curriculum-Specific Expertise */}

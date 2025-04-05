@@ -1,6 +1,4 @@
-import React from 'react'
-import choose from "/images/choose.jpg";
-import { Link } from 'react-router-dom';
+import choose from "/images/Mthedemic_Why_Choose_Us.png";
 const Make_US_Different = () => {
   return (
     <>
@@ -65,12 +63,9 @@ const Make_US_Different = () => {
                         </div>
                     </div>
                     <div className="col-lg-4">
-                        <div className="right-img">
+                        <div className="right-img" >
                             <img src={choose} alt="" />
-                            <Link to="https://www.youtube.com/embed/r5sw-6lJmTA?autoplay=1" className="video-btn"
-                                data-type="iframe">
-                                <i className="fi flaticon-play-1"></i>
-                            </Link>
+                            
                         </div>
                     </div>
                 </div>
