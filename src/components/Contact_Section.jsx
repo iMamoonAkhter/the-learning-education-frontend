@@ -28,7 +28,7 @@ const Contact = () => {
     const toastId = toast.info("Sending message...", { autoClose: false });
   
     try {
-      const response = await fetch(`${API}/v1/users/nodemailer`, {
+      const response = await fetch(`${API}/users/nodemailer`, {
         method: "POST",
         body: JSON.stringify(values),
         headers: {
@@ -53,6 +53,7 @@ const Contact = () => {
   
       resetForm(); // Reset the form after success
     } catch (err) {
+      console.error("Error sending message:", err);
       toast.update(toastId, {
         render: "Failed to send message. Please try again.",
         type: "error",
