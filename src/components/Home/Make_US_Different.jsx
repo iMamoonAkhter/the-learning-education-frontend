@@ -1,4 +1,5 @@
 import choose from "/images/Mthedemic_Why_Choose_Us.png";
+import "../../style/make-us-different.css"
 const Make_US_Different = () => {
   return (
     <>

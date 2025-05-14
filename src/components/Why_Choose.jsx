@@ -1,4 +1,3 @@
-import React from "react";
 import { FaCheckCircle, FaChalkboardTeacher, FaCalendarAlt, FaChartLine, FaBookOpen, FaGlobe, FaComments, FaLaptop } from "react-icons/fa"; // Icons for list items
 import "../style/why-choose.css"; // Import the custom CSS
 import { useSelector } from "react-redux";
@@ -15,9 +14,9 @@ const Why_Choose = () => {
               <div className="wpo-section-title text-center">
                 <h2>Why Choose Us</h2>
                 <p>
-                  At {tutoring.service_name}, we are committed to providing
+                  {`At ${tutoring.service_name}, we are committed to providing
                   exceptional educational support tailored to each student's
-                  unique needs.
+                  unique needs.`}
                 </p>
               </div>
             </div>
@@ -44,8 +43,8 @@ const Why_Choose = () => {
                   <div className="why-choose-item-content">
                     <h3>Personalized Lesson Plans</h3>
                     <p>
-                      Customized lessons to match each student’s learning pace
-                      and academic goals.
+                      {`Customized lessons to match each student's learning pace
+                      and academic goals.`}
                     </p>
                   </div>
                 </li>
