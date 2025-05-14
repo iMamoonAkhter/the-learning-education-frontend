@@ -1,3 +1,10 @@
 .right-img img{
     height: 630px;
 }
+
+@media screen and (max-width: 768px) {
+    .right-img img{
+        height: 400px;
+    }
+    
+}
