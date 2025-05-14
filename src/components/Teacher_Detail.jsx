@@ -233,9 +233,10 @@ const Teacher_Detail = () => {
                         <option value="" disabled>
                           Subject
                         </option>
-                        <option value="Algebra">Algebra</option>
-                        <option value="Geometry">Geometry</option>
-                        <option value="Calculus">Calculus</option>
+                        <option value="English">English</option>
+                        <option value="Science">Science</option>
+                        <option value="Math">Math</option>
+                        <option value="Test Prep">Test Prep</option>
                       </Field>
                       <ErrorMessage
                         name="service"
