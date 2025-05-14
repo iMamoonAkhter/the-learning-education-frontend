@@ -4,21 +4,19 @@ const initialState = {
   name: "Haseeb Nazeer",
   email: "haseeb.nazeer@gmail.com",
   phone: "+923120408900",
-  position: "Senior Mathematics Teacher",
+  position: "English Grammar & Comprehension",
+  address: "Central Park Housing Scheme, Lahore, Punjab, Pakistan",
   experience: "10 Years",
   experience_detail:
-    "I am a dedicated mathematics teacher with a passion for making learning engaging and accessible for students of all levels. I have a deep understanding of advanced mathematical concepts and am skilled in utilizing technology and innovative teaching methodologies.",
-  address: "Central Park Housing Scheme, Lahore, Punjab, Pakistan",
+    "Does English feel like a challenge for your child? Concepts like Comprehension, Grammar, and Creative Writing don`t have to be overwhelming. Hi, my name is Haseeb Nazeer, and I have eight years of dedicated tutoring experience where I turned complex topics into lessons students can connect with and enjoy.\n\n What makes me an effective tutor isn`t just my knowledge but the way I listen to and connect with students. I have worked with students from the UK, USA, Canada, Australia, Gulf and many other countries. I have constantly adapted my teaching style that meet their specific needs and cultural contexts. I believe learning happens best when students feel understood and supported. For me teaching is a two-way street: while I guide students, I also learn from them.",
   education: [
-    "MSc Mathematics - Quaid-e-Azam University, Islamabad",
-    "BSc Mathematics - Punjab University, Lahore",
-    "Certified Mathematics Instructor - International Teaching Academy",
-    "Advanced Teaching Certification - National Institute of Education",
+    `MA English Language Teaching and Linguistics (Sep, 2014${'-'}Jun, 2016) from University of Punjab Lahore Pakistan `
   ],
   skills: [
-    { name: "Mathematics", percentage: 95 },
-    { name: "Problem Solving", percentage: 90 },
-    { name: "Teaching Strategies", percentage: 85 },
+    { name: "English", percentage: 100 },
+    { name: "Essay Writing", percentage: 90 },
+    { name: "Writing Skills and Creative Writing", percentage: 95 },
+    {name: "Grammar, Vocabulary, and Comprehension", percentage: 95},
   ],
   achievements: [
     "Best Mathematics Teacher Award 2020",

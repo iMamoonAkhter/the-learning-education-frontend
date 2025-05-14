@@ -77,7 +77,7 @@ const Teacher_Detail = () => {
                     </li>
                   </ul>
 
-                  <div className="certificates-wrap">
+                  {/* <div className="certificates-wrap">
                     <h2>Certificates</h2>
                     <div className="certificates-items">
                       {teacher.certificates?.map((e, index) => (
@@ -86,7 +86,7 @@ const Teacher_Detail = () => {
                         </div>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -110,6 +110,7 @@ const Teacher_Detail = () => {
                     ))}
                   </ul>
                 </div>
+                
               </div>
             </div>
 
