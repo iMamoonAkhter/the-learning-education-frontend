@@ -63,7 +63,7 @@ const SmarterWay = () => {
                 {/* Features */}
                 <div className="wpo-about-features-wrap">
                   {[
-                    { icon: "fi flaticon-training-1", text: "20+ Subjects Covered" },
+                    { icon: "fi flaticon-training-1", text: "10+ Subjects Covered" },
                     { icon: "fi flaticon-video-lesson", text: "300+ Free Trial Classes" },
                     { icon: "fi flaticon-team", text: "500+ Students Tutored" },
                     { icon: "fi flaticon-training", text: "20+ Qualified Tutors" },

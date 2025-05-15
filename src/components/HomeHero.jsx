@@ -83,7 +83,7 @@ const HomeHero = () => {
                                     <div className="wpo-supporter-text">
                                         <div className="content">
                                             <h3>20+</h3>
-                                            <p>Certified Tutors</p>
+                                            <p>Professional Tutors</p>
                                         </div>
                                     </div>
                                     <div className="wpo-supporter-img">

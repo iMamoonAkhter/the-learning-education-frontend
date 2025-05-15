@@ -11,10 +11,10 @@ const About_Badge = () => {
             <div className="wpo-fun-fact-grids clearfix">
               {/* Badge Items */}
               {[
-                { count: 985, label: "Student Enrolled" },
-                { count: 25, label: "Winning Award" },
-                { count: 35, label: "Event Organized" },
-                { count: 355, label: "Expert Mentor" },
+                { count: 20, label: "Professional Tutors" },
+                { count: 10, label: "Subjects Covered" },
+                { count: 500, label: "Students Tutored" },
+                { count: 5, label: "Years of Experience" },
               ].map((item, index) => (
                 <div className="grid" key={index}>
                   <div className="info">

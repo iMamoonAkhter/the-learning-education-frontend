@@ -50,7 +50,18 @@ const Navbar = () => {
 
   return (
     <AppBar position="static" sx={{ backgroundColor: "white", color: "black", boxShadow: "none" }}>
-      <Toolbar sx={{ justifyContent: { xs: "space-between", md: "center" } }}>
+      <Toolbar sx={{ justifyContent: "space-between" }}>
+        {/* Logo on the left */}
+        <Box sx={{ display: "flex", alignItems: "center", marginLeft: "50px" }}>
+          <Link to="/">
+            <img 
+              src="/images/LOGO/PNG/Color Logo PNG.png" 
+              alt="Logo" 
+              style={{ height: "50px" }} 
+            />
+          </Link>
+        </Box>
+
         {/* Toggle Button for Mobile */}
         <IconButton
           size="large"
@@ -70,6 +81,9 @@ const Navbar = () => {
             flexDirection: "row",
             alignItems: "center",
             gap: 2,
+            position: "absolute",
+            left: "50%",
+            transform: "translateX(-50%)",
           }}
         >
           {/* Home Link */}
@@ -77,14 +91,14 @@ const Navbar = () => {
             component={Link}
             to="/"
             sx={{
-              color: location.pathname === "/" ? "primary.main" : "inherit",
+              color: location.pathname === "/" ? "white" : "inherit",
               textTransform: "none",
               fontSize: "1rem",
-              backgroundColor: location.pathname === "/" ? "#f8f9fa" : "transparent",
+              backgroundColor: location.pathname === "/" ? "#4281ff" : "transparent",
               borderRadius: "4px",
               padding: "6px 12px",
               "&:hover": {
-                backgroundColor: "#e9ecef",
+                backgroundColor: location.pathname === "/" ? "#3a75e6" : "#e9ecef",
               },
             }}
           >
@@ -94,14 +108,14 @@ const Navbar = () => {
           {/* Fee Structure Dropdown */}
           <Button
             sx={{
-              color: isFeeActive ? "primary.main" : "inherit",
+              color: isFeeActive ? "white" : "inherit",
               textTransform: "none",
               fontSize: "1rem",
-              backgroundColor: isFeeActive ? "#f8f9fa" : "transparent",
+              backgroundColor: isFeeActive ? "#4281ff" : "transparent",
               borderRadius: "4px",
               padding: "6px 12px",
               "&:hover": {
-                backgroundColor: "#e9ecef",
+                backgroundColor: isFeeActive ? "#3a75e6" : "#e9ecef",
               },
             }}
             onClick={handleFeeMenuOpen}
@@ -124,10 +138,10 @@ const Navbar = () => {
                 to={path}
                 onClick={handleFeeMenuClose}
                 sx={{ 
-                  color: location.pathname === path ? "primary.main" : "inherit",
-                  backgroundColor: location.pathname === path ? "#f8f9fa" : "transparent",
+                  color: location.pathname === path ? "white" : "inherit",
+                  backgroundColor: location.pathname === path ? "#4281ff" : "transparent",
                   "&:hover": {
-                    backgroundColor: "#e9ecef",
+                    backgroundColor: location.pathname === path ? "#3a75e6" : "#e9ecef",
                   },
                 }}
               >
@@ -141,14 +155,14 @@ const Navbar = () => {
             component={Link}
             to="/services"
             sx={{
-              color: location.pathname === "/services" ? "primary.main" : "inherit",
+              color: location.pathname === "/services" ? "white" : "inherit",
               textTransform: "none",
               fontSize: "1rem",
-              backgroundColor: location.pathname === "/services" ? "#f8f9fa" : "transparent",
+              backgroundColor: location.pathname === "/services" ? "#4281ff" : "transparent",
               borderRadius: "4px",
               padding: "6px 12px",
               "&:hover": {
-                backgroundColor: "#e9ecef",
+                backgroundColor: location.pathname === "/services" ? "#3a75e6" : "#e9ecef",
               },
             }}
           >
@@ -160,14 +174,14 @@ const Navbar = () => {
             component={Link}
             to="/contact"
             sx={{
-              color: location.pathname === "/contact" ? "primary.main" : "inherit",
+              color: location.pathname === "/contact" ? "white" : "inherit",
               textTransform: "none",
               fontSize: "1rem",
-              backgroundColor: location.pathname === "/contact" ? "#f8f9fa" : "transparent",
+              backgroundColor: location.pathname === "/contact" ? "#4281ff" : "transparent",
               borderRadius: "4px",
               padding: "6px 12px",
               "&:hover": {
-                backgroundColor: "#e9ecef",
+                backgroundColor: location.pathname === "/contact" ? "#3a75e6" : "#e9ecef",
               },
             }}
           >
@@ -177,14 +191,14 @@ const Navbar = () => {
           {/* About Dropdown */}
           <Button
             sx={{
-              color: isAboutActive ? "primary.main" : "inherit",
+              color: isAboutActive ? "white" : "inherit",
               textTransform: "none",
               fontSize: "1rem",
-              backgroundColor: isAboutActive ? "#f8f9fa" : "transparent",
+              backgroundColor: isAboutActive ? "#4281ff" : "transparent",
               borderRadius: "4px",
               padding: "6px 12px",
               "&:hover": {
-                backgroundColor: "#e9ecef",
+                backgroundColor: isAboutActive ? "#3a75e6" : "#e9ecef",
               },
             }}
             onClick={handleAboutMenuOpen}
@@ -202,10 +216,10 @@ const Navbar = () => {
               to="/about"
               onClick={handleAboutMenuClose}
               sx={{ 
-                color: location.pathname === "/about" ? "primary.main" : "inherit",
-                backgroundColor: location.pathname === "/about" ? "#f8f9fa" : "transparent",
+                color: location.pathname === "/about" ? "white" : "inherit",
+                backgroundColor: location.pathname === "/about" ? "#4281ff" : "transparent",
                 "&:hover": {
-                  backgroundColor: "#e9ecef",
+                  backgroundColor: location.pathname === "/about" ? "#3a75e6" : "#e9ecef",
                 },
               }}
             >
@@ -223,10 +237,10 @@ const Navbar = () => {
                 to={path}
                 onClick={handleAboutMenuClose}
                 sx={{ 
-                  color: location.pathname === path ? "primary.main" : "inherit",
-                  backgroundColor: location.pathname === path ? "#f8f9fa" : "transparent",
+                  color: location.pathname === path ? "white" : "inherit",
+                  backgroundColor: location.pathname === path ? "#4281ff" : "transparent",
                   "&:hover": {
-                    backgroundColor: "#e9ecef",
+                    backgroundColor: location.pathname === path ? "#3a75e6" : "#e9ecef",
                   },
                 }}
               >
@@ -235,6 +249,9 @@ const Navbar = () => {
             ))}
           </Menu>
         </Box>
+
+        {/* Empty Box for spacing on the right side */}
+        <Box sx={{ display: { xs: "none", md: "block" }, width: "150px" }}></Box>
 
         {/* Drawer for Mobile */}
         <Drawer
@@ -249,6 +266,17 @@ const Navbar = () => {
             onClick={(e) => e.stopPropagation()} // Prevent Drawer from closing
             onKeyDown={(e) => e.stopPropagation()} // Prevent Drawer from closing
           >
+            {/* Logo in Drawer */}
+            <Box sx={{ p: 2, display: "flex", justifyContent: "center" }}>
+              <Link to="/" onClick={handleDrawerClose}>
+                <img 
+                  src="/images/LOGO/PNG/Color Logo PNG.png" 
+                  alt="Logo" 
+                  style={{ height: "40px" }} 
+                />
+              </Link>
+            </Box>
+            
             <List>
               {/* Home Link */}
               <ListItem
@@ -256,10 +284,13 @@ const Navbar = () => {
                 to="/"
                 onClick={handleDrawerClose} // Close Drawer when clicking a link
                 sx={{
-                  color: location.pathname === "/" ? "primary.main" : "inherit",
+                  color: location.pathname === "/" ? "white" : "inherit",
                   textTransform: "none",
                   fontSize: "1rem",
-                  backgroundColor: location.pathname === "/" ? "#f8f9fa" : "transparent",
+                  backgroundColor: location.pathname === "/" ? "#4281ff" : "transparent",
+                  "&:hover": {
+                    backgroundColor: location.pathname === "/" ? "#3a75e6" : "#e9ecef",
+                  },
                 }}
               >
                 <ListItemText primary="Home" />
@@ -270,8 +301,11 @@ const Navbar = () => {
                 button 
                 onClick={() => setFeeMenuOpen(!feeMenuOpen)}
                 sx={{
-                  backgroundColor: isFeeActive ? "#f8f9fa" : "transparent",
-                  color: isFeeActive ? "primary.main" : "inherit",
+                  backgroundColor: isFeeActive ? "#4281ff" : "transparent",
+                  color: isFeeActive ? "white" : "inherit",
+                  "&:hover": {
+                    backgroundColor: isFeeActive ? "#3a75e6" : "#e9ecef",
+                  },
                 }}
               >
                 <ListItemText primary="Fee Structure" />
@@ -290,8 +324,11 @@ const Navbar = () => {
                       onClick={handleDrawerClose} // Close Drawer when clicking a link
                       sx={{
                         pl: 4,
-                        color: location.pathname === path ? "primary.main" : "inherit",
-                        backgroundColor: location.pathname === path ? "#f8f9fa" : "transparent",
+                        color: location.pathname === path ? "white" : "inherit",
+                        backgroundColor: location.pathname === path ? "#4281ff" : "transparent",
+                        "&:hover": {
+                          backgroundColor: location.pathname === path ? "#3a75e6" : "#e9ecef",
+                        },
                       }}
                     >
                       <ListItemText primary={label} />
@@ -306,10 +343,13 @@ const Navbar = () => {
                 to="/services"
                 onClick={handleDrawerClose} // Close Drawer when clicking a link
                 sx={{
-                  color: location.pathname === "/services" ? "primary.main" : "inherit",
+                  color: location.pathname === "/services" ? "white" : "inherit",
                   textTransform: "none",
                   fontSize: "1rem",
-                  backgroundColor: location.pathname === "/services" ? "#f8f9fa" : "transparent",
+                  backgroundColor: location.pathname === "/services" ? "#4281ff" : "transparent",
+                  "&:hover": {
+                    backgroundColor: location.pathname === "/services" ? "#3a75e6" : "#e9ecef",
+                  },
                 }}
               >
                 <ListItemText primary="Services" />
@@ -321,10 +361,13 @@ const Navbar = () => {
                 to="/contact"
                 onClick={handleDrawerClose} // Close Drawer when clicking a link
                 sx={{
-                  color: location.pathname === "/contact" ? "primary.main" : "inherit",
+                  color: location.pathname === "/contact" ? "white" : "inherit",
                   textTransform: "none",
                   fontSize: "1rem",
-                  backgroundColor: location.pathname === "/contact" ? "#f8f9fa" : "transparent",
+                  backgroundColor: location.pathname === "/contact" ? "#4281ff" : "transparent",
+                  "&:hover": {
+                    backgroundColor: location.pathname === "/contact" ? "#3a75e6" : "#e9ecef",
+                  },
                 }}
               >
                 <ListItemText primary="Contact" />
@@ -335,8 +378,11 @@ const Navbar = () => {
                 button 
                 onClick={() => setAboutMenuOpen(!aboutMenuOpen)}
                 sx={{
-                  backgroundColor: isAboutActive ? "#f8f9fa" : "transparent",
-                  color: isAboutActive ? "primary.main" : "inherit",
+                  backgroundColor: isAboutActive ? "#4281ff" : "transparent",
+                  color: isAboutActive ? "white" : "inherit",
+                  "&:hover": {
+                    backgroundColor: isAboutActive ? "#3a75e6" : "#e9ecef",
+                  },
                 }}
               >
                 <ListItemText primary="About" />
@@ -350,8 +396,11 @@ const Navbar = () => {
                     onClick={handleDrawerClose} // Close Drawer when clicking a link
                     sx={{
                       pl: 4,
-                      color: location.pathname === "/about" ? "primary.main" : "inherit",
-                      backgroundColor: location.pathname === "/about" ? "#f8f9fa" : "transparent",
+                      color: location.pathname === "/about" ? "white" : "inherit",
+                      backgroundColor: location.pathname === "/about" ? "#4281ff" : "transparent",
+                      "&:hover": {
+                        backgroundColor: location.pathname === "/about" ? "#3a75e6" : "#e9ecef",
+                      },
                     }}
                   >
                     <ListItemText primary="About Us" />
@@ -369,8 +418,11 @@ const Navbar = () => {
                       onClick={handleDrawerClose} // Close Drawer when clicking a link
                       sx={{
                         pl: 4,
-                        color: location.pathname === path ? "primary.main" : "inherit",
-                        backgroundColor: location.pathname === path ? "#f8f9fa" : "transparent",
+                        color: location.pathname === path ? "white" : "inherit",
+                        backgroundColor: location.pathname === path ? "#4281ff" : "transparent",
+                        "&:hover": {
+                          backgroundColor: location.pathname === path ? "#3a75e6" : "#e9ecef",
+                        },
                       }}
                     >
                       <ListItemText primary={label} />
