@@ -67,9 +67,6 @@ const Teacher_Detail = () => {
                       Experience: <span>{teacher.experience}</span>
                     </li>
                     <li>
-                      Address: <span>{teacher.address}</span>
-                    </li>
-                    <li>
                       Phone: <span>{teacher.phone}</span>
                     </li>
                     <li>
@@ -145,16 +142,7 @@ const Teacher_Detail = () => {
                   </div>
                 </div>
 
-                <div className="col-lg-6">
-                  <div className="education-area ex-wiget">
-                    <h2>Achievements</h2>
-                    <ul>
-                      {teacher.achievements.map((e, index)=>(
-                        <li key={index}>{e}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>

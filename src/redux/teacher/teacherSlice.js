@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   name: "Haseeb Nazeer",
-  email: "haseeb.nazeer@gmail.com",
+  email: "info@mathedemic.com",
   phone: "+923120408900",
   position: "English Grammar & Comprehension",
   address: "Central Park Housing Scheme, Lahore, Punjab, Pakistan",
@@ -13,10 +13,10 @@ const initialState = {
     `MA English Language Teaching and Linguistics (Sep, 2014${'-'}Jun, 2016) from University of Punjab Lahore Pakistan `
   ],
   skills: [
-    { name: "English", percentage: 100 },
+    { name: "English Comprehension", percentage: 100 },
     { name: "Essay Writing", percentage: 90 },
     { name: "Writing Skills and Creative Writing", percentage: 95 },
-    {name: "Grammar, Vocabulary, and Comprehension", percentage: 95},
+    {name: "Grammar, Vocabulary", percentage: 95},
   ],
   achievements: [
     "Best Mathematics Teacher Award 2020",

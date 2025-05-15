@@ -109,11 +109,11 @@ const TermsDetails = () => {
       </section>
 
       <p className="terms-footer">
-        📌 By enrolling in our tutoring services, you agree to abide by these Terms & Conditions. If you have any questions, please contact our support team.  
+        By enrolling in our tutoring services, you agree to abide by these Terms & Conditions. If you have any questions, please contact our support team.  
         <br />
-        📞 Need Assistance? Contact us at <strong><Link to={'/contact'}>Contact US!</Link></strong>.
+        Need Assistance? Contact us at <strong><Link to={'/contact'}>Contact US!</Link></strong>.
         <br />
-        🚀 Thank you for choosing <strong>{tutoring.service_name}</strong>! We look forward to helping your child succeed. 🎓
+        Thank you for choosing <strong>{tutoring.service_name}</strong>! We look forward to helping your child succeed.
       </p>
       </div>
     </div>

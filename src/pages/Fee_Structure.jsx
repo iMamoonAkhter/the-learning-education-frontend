@@ -17,7 +17,7 @@ const UK_Fee_Structure = () => {
 
       {nav.pathname == "/us-international-fee-structure" && (
         <div>
-          <PageHeader title={"US Fee Structure"} />
+          <PageHeader title={"US & International Fee Structure"} />
           <US_International_Details />
         </div>
       )}
