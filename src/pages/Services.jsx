@@ -1,6 +1,5 @@
 import { Tab, Nav } from "react-bootstrap";
 import PageHeader from "../components/PageHeader";
-import teacher_img from "/images/teacher.png";
 import { useSelector } from "react-redux";
 import "../style/Service.css"
 const Services = () => {
@@ -14,10 +13,6 @@ const Services = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="wpo-course-details-wrap">
-                <div className="wpo-course-details-img text-center d-flex justify-content-center align-items-center">
-                  <img src={teacher.image} alt="Instructor" />
-                </div>
-
                 <Tab.Container defaultActiveKey="Overview">
                   <div className="wpo-course-details-tab">
                     <Nav variant="tabs">
@@ -40,7 +35,7 @@ const Services = () => {
                         <div className="wpo-course-content">
                           <h2>Empowering Students Through Personalized Education</h2>
                           <p>
-                            At <b>{tutoring.service_name}</b>, we believe in unlocking every student's potential through tailored educational support.
+                            At <b>{tutoring.service_name}</b>, we believe in unlocking every student&apos;s potential through tailored educational support.
                             Our goal is to provide the right guidance and resources to help students excel academically while fostering a passion for learning.
                           </p>
 
@@ -110,12 +105,7 @@ const Services = () => {
                       <Tab.Pane eventKey="Instructor">
                         <div className="team-info-wrap">
                           <div className="row align-items-center">
-                            <div className="col-lg-5">
-                              <div className="team-info-img">
-                                <img src={teacher_img} alt="Instructor" />
-                              </div>
-                            </div>
-                            <div className="col-lg-7">
+                            <div className="col-lg-7 mx-auto">
                               <div className="team-info-text">
                                 <h2>{teacher.name}</h2>
                                 <ul>

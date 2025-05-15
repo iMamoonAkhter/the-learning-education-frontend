@@ -20,15 +20,15 @@ const UK_Details = () => {
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
             <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-black">
-              Designed for business teams like yours
+              Choose from our affordable Fee plans below
             </h2>
             <p className="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
-              Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.
+              If you need a customized plan for one or multiple kids, contact us and we will provide you with the plan you need.
             </p>
           </div>
 
           {/* Fee Structure for Year Group 1-4 */}
-          <h2 className="text-4xl font-extrabold text-center text-blue-600 dark:text-blue-400 mb-4">
+          <h2 className="text-6xl font-extrabold text-center text-blue-600 dark:text-blue-400 mb-4">
             Fee Structure for <span className="text-gray-900 dark:text-black">Year Group 1-4</span>
           </h2>
           <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
@@ -118,7 +118,7 @@ const UK_Details = () => {
           </div>
 
           {/* Fee Structure for Year Group 5-8 */}
-          <h2 className="text-4xl font-extrabold text-center text-blue-600 dark:text-blue-400 mb-4" style={{ marginTop: '4rem' }}>
+          <h2 className="text-6xl font-extrabold text-center text-blue-600 dark:text-blue-400 mb-4" style={{ marginTop: '4rem' }}>
             Fee Structure for <span className="text-gray-900 dark:text-black">Year Group 5-8</span>
           </h2>
           <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
@@ -208,7 +208,7 @@ const UK_Details = () => {
           </div>
 
           {/* Fee Structure for Year Group 9-10 */}
-          <h2 className="text-4xl font-extrabold text-center text-blue-600 dark:text-blue-400 mb-4" style={{ marginTop: '4rem' }}>
+          <h2 className="text-6xl font-extrabold text-center text-blue-600 dark:text-blue-400 mb-4" style={{ marginTop: '4rem' }}>
             Fee Structure for <span className="text-gray-900 dark:text-black">Year Group 9-10</span>
           </h2>
           <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
@@ -298,7 +298,7 @@ const UK_Details = () => {
           </div>
 
           {/* Fee Structure for Year Group 11-12 */}
-          <h2 className="text-4xl font-extrabold text-center text-blue-600 dark:text-blue-400 mb-4" style={{ marginTop: '4rem' }}>
+          <h2 className="text-6xl font-extrabold text-center text-blue-600 dark:text-blue-400 mb-4" style={{ marginTop: '4rem' }}>
             Fee Structure for <span className="text-gray-900 dark:text-black">Year Group 11-12</span>
           </h2>
           <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
