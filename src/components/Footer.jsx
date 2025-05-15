@@ -1,6 +1,12 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "/images/LOGO/PNG/White Logo PNG@2x.png"
+
+// Custom styles
+const footerLinkStyle = {
+  textDecoration: "none"
+};
+
 const Footer = () => {
   const teacher = useSelector((state) => state.teacher);
   const tutoring = useSelector((state) => state.tutoring);
@@ -20,7 +26,7 @@ const Footer = () => {
               <div className="col-12 col-md-6 col-lg-3">
                 <div className="widget about-widget">
                   <div className="logo widget-title">
-                    <Link className="navbar-brand" to="/" onClick={scrollToTop}>
+                    <Link style={footerLinkStyle} className="navbar-brand" to="/" onClick={scrollToTop}>
                       <img src={logo} alt={tutoring.service_name} />
                     </Link>
                   </div>
@@ -33,22 +39,22 @@ const Footer = () => {
                   <div className="social">
                     <ul>
                       <li>
-                        <Link to="https://www.facebook.com/" target="_blank">
+                        <Link style={footerLinkStyle} to="https://www.facebook.com/" target="_blank">
                           <i className="fi flaticon-facebook-app-symbol"></i>
                         </Link>
                       </li>
                       <li>
-                        <Link to="https://twitter.com/" target="_blank">
+                        <Link style={footerLinkStyle} to="https://twitter.com/" target="_blank">
                           <i className="fi flaticon-twitter"></i>
                         </Link>
                       </li>
                       <li>
-                        <Link to="https://www.linkedin.com/" target="_blank">
+                        <Link style={footerLinkStyle} to="https://www.linkedin.com/" target="_blank">
                           <i className="fi flaticon-linkedin"></i>
                         </Link>
                       </li>
                       <li>
-                        <Link to="https://www.instagram.com/" target="_blank">
+                        <Link style={footerLinkStyle} to="https://www.instagram.com/" target="_blank">
                           <i className="fi flaticon-instagram-1"></i>
                         </Link>
                       </li>
@@ -65,22 +71,22 @@ const Footer = () => {
                   </div>
                   <ul>
                     <li>
-                      <Link to="/" onClick={scrollToTop}>
+                      <Link style={footerLinkStyle} to="/" onClick={scrollToTop}>
                         Home
                       </Link>
                     </li>
                     <li>
-                      <Link to="/about" onClick={scrollToTop}>
+                      <Link style={footerLinkStyle} to="/about" onClick={scrollToTop}>
                         About Us
                       </Link>
                     </li>
                     <li>
-                      <Link to="/contact" onClick={scrollToTop}>
+                      <Link style={footerLinkStyle} to="/contact" onClick={scrollToTop}>
                         Contact Us
                       </Link>
                     </li>
                     <li>
-                      <Link to="/services" onClick={scrollToTop}>
+                      <Link style={footerLinkStyle} to="/services" onClick={scrollToTop}>
                         Services
                       </Link>
                     </li>
@@ -96,22 +102,22 @@ const Footer = () => {
                   </div>
                   <ul>
                     <li>
-                      <Link to="/terms-and-condition" onClick={scrollToTop}>
+                      <Link style={footerLinkStyle} to="/terms-and-condition" onClick={scrollToTop}>
                         Terms & Condition
                       </Link>
                     </li>
                     <li>
-                      <Link to="/why-choose-us" onClick={scrollToTop}>
+                      <Link style={footerLinkStyle} to="/why-choose-us" onClick={scrollToTop}>
                         Why Choose Us
                       </Link>
                     </li>
                     <li>
-                      <Link to="/teacher-details" onClick={scrollToTop}>
+                      <Link style={footerLinkStyle} to="/teacher-details" onClick={scrollToTop}>
                         Teacher
                       </Link>
                     </li>
                     <li>
-                      <Link to="/faq" onClick={scrollToTop}>
+                      <Link style={footerLinkStyle} to="/faq" onClick={scrollToTop}>
                         FAQ
                       </Link>
                     </li>
@@ -152,7 +158,7 @@ const Footer = () => {
               <div className="col-12 col-md-6">
                 <ul>
                   <li>
-                    &copy; 2023 <Link to="/" onClick={scrollToTop}>{tutoring.service_name}</Link>. All rights reserved.
+                    &copy; 2023 <Link style={footerLinkStyle} to="/" onClick={scrollToTop}>{tutoring.service_name}</Link>. All rights reserved.
                   </li>
                 </ul>
               </div>
@@ -160,12 +166,12 @@ const Footer = () => {
                 <div className="link">
                   <ul>
                     <li>
-                      <Link to="/about" onClick={scrollToTop}>
+                      <Link style={footerLinkStyle} to="/about" onClick={scrollToTop}>
                         About us
                       </Link>
                     </li>
                     <li>
-                      <Link to="/faq" onClick={scrollToTop}>
+                      <Link style={footerLinkStyle} to="/faq" onClick={scrollToTop}>
                         FAQ
                       </Link>
                     </li>
