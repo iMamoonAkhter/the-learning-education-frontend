@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./style/global-additions.css";
 .error-message{
     color: red;
 }

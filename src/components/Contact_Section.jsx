@@ -68,7 +68,7 @@ const Contact = () => {
   const whatsappUrl = `https://wa.me/${teacher.phone}`;
 
   return (
-    <section className="wpo-contact-pg-section section-padding">
+    <section className="wpo-contact-pg-section section-padding" style={{ paddingBottom: '100px', overflow: 'hidden' }}>
       <div className="container">
         <div className="row">
           <div className="col col-lg-10 offset-lg-1">

@@ -1,6 +1,7 @@
 @font-face {
   font-family: "flaticon_education";
   src: url("./flaticon_education.ttf?877ec50832e2fc0503090eb64151d07e") format("truetype"), url("./flaticon_education.woff?877ec50832e2fc0503090eb64151d07e") format("woff"), url("./flaticon_education.woff2?877ec50832e2fc0503090eb64151d07e") format("woff2"), url("./flaticon_education.eot?877ec50832e2fc0503090eb64151d07e#iefix") format("embedded-opentype"), url("./flaticon_education.svg?877ec50832e2fc0503090eb64151d07e#flaticon_education") format("svg");
+  font-display: swap;
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {

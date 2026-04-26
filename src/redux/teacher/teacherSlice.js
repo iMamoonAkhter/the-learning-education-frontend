@@ -3,9 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   name: "Haseeb Nazeer",
   email: "info@mathedemic.com",
-  phone: "+923120408900",
+  phone: "+1 251 255 5852",
   position: "English Grammar & Comprehension",
-  address: "Central Park Housing Scheme, Lahore, Punjab, Pakistan",
+  address: "Worldwide — UK, USA, Australia & Beyond",
   experience: "10 Years",
   experience_detail:
     "Does English feel like a challenge for your child? Concepts like Comprehension, Grammar, and Creative Writing don`t have to be overwhelming. Hi, my name is Haseeb Nazeer, and I have eight years of dedicated tutoring experience where I turned complex topics into lessons students can connect with and enjoy.\n\n What makes me an effective tutor isn`t just my knowledge but the way I listen to and connect with students. I have worked with students from the UK, USA, Canada, Australia, Gulf and many other countries. I have constantly adapted my teaching style that meet their specific needs and cultural contexts. I believe learning happens best when students feel understood and supported. For me teaching is a two-way street: while I guide students, I also learn from them.",

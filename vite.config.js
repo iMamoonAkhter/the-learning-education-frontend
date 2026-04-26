@@ -5,6 +5,21 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
-    sourcemap: false, // Disable source maps
+    sourcemap: false,
+    target: 'chrome69',
+    minify: 'terser',
+    cssMinify: true,
+    chunkSizeWarningLimit: 600,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom'],
+          'vendor-router': ['react-router-dom'],
+          'vendor-mui': ['@mui/material', '@mui/icons-material'],
+          'vendor-typed': ['typed.js'],
+          'vendor-swiper': ['swiper'],
+        },
+      },
+    },
   },
 })

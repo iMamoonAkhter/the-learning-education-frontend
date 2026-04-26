@@ -1,3 +1,22 @@
+/* Hero background gradient override */
+.static-hero {
+  background: linear-gradient(135deg, #EEF4FF 0%, #FFF8EC 60%, #FFF0EE 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+.static-hero::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(66,129,255,0.06) 0%, transparent 70%);
+  top: -100px;
+  left: -100px;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .client{
     display: flex;
     justify-content: space-between;

@@ -1,131 +1,255 @@
+import { useState } from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
-import scienceImg from "/images/Mthedemic_Science_Tutoring_Services.png";
-import "../style/course-detail.css";
+import useScrollReveal from "../utils/useScrollReveal";
+import { waLink, WHATSAPP_BOOKING_MESSAGE } from "../constants/contact";
 
-const ScienceTutoring = () => {
+const gradeLevels = [
+  {
+    icon: "🔬",
+    title: "General Science",
+    range: "Grades 1–5 · KS1 & KS2",
+    color: "#10B981",
+    bg: "#ECFDF5",
+    topics: [
+      "Scientific method: observation, hypothesis & experiment",
+      "Living & non-living things: plants, animals & habitats",
+      "The human body: organs, senses & basic biology",
+      "Earth & space: seasons, day/night, planets & weather",
+      "States of matter: solids, liquids & gases",
+      "Energy & forces: light, sound & simple machines",
+    ],
+  },
+  {
+    icon: "⚗️",
+    title: "Integrated Science",
+    range: "Grades 6–8 · KS3",
+    color: "#FF9682",
+    bg: "#FFF0EE",
+    topics: [
+      "Cell biology: cell structure, function & cell division",
+      "Ecosystems: food webs, nutrient cycles & biodiversity",
+      "Atomic structure: protons, neutrons, electrons & isotopes",
+      "Chemical reactions: balancing equations & energy changes",
+      "Forces & motion: speed, velocity, acceleration & Newton's Laws",
+      "Electricity & magnetism: circuits, voltage & current",
+    ],
+  },
+  {
+    icon: "🧪",
+    title: "GCSE Science",
+    range: "Grades 9–11 · GCSE Biology, Chemistry & Physics",
+    color: "#4281FF",
+    bg: "#EEF4FF",
+    topics: [
+      "Biology: genetics, evolution, homeostasis & disease",
+      "Chemistry: bonding, moles, organic chemistry & electrolysis",
+      "Physics: waves, nuclear physics, space & electromagnetic spectrum",
+      "Required practicals and scientific method exam questions",
+      "Combined Science & Triple Award pathways",
+      "AQA, Edexcel, OCR & iGCSE exam board preparation",
+    ],
+  },
+  {
+    icon: "🚀",
+    title: "A-Level, AP & IB Science",
+    range: "Grades 11–13 · A-Level · AP · IB",
+    color: "#8B5CF6",
+    bg: "#F3F0FF",
+    topics: [
+      "A-Level Biology: photosynthesis, respiration, genetics & immunology",
+      "A-Level Chemistry: thermodynamics, organic mechanisms & spectroscopy",
+      "A-Level Physics: quantum mechanics, fields & nuclear decay",
+      "AP Biology, Chemistry & Physics (1, 2, C: Mechanics & E&M)",
+      "IB Biology, Chemistry & Physics (SL and HL)",
+      "Past paper technique, mark scheme analysis & exam strategy",
+    ],
+  },
+];
+
+const whyPoints = [
+  "Separate Biology, Chemistry and Physics specialists — not a one-size-fits-all approach",
+  "Covers GCSE, iGCSE, A-Level, AP, IB and NAPLAN Science curricula",
+  "Practical experiment guidance alongside theory to build deep understanding",
+  "Regular exam technique sessions using past papers and mark schemes",
+  "Flexible online sessions available at weekends and evenings",
+  "Students typically improve by one to two grade boundaries within a single term",
+];
+
+const GradeCard = ({ g, i }) => {
+  const [collapsed, setCollapsed] = useState(true);
+  return (
+    <div className={`grade-card reveal reveal-delay-${(i % 4) + 1}`}>
+      <div className="grade-card-header" style={{ background: g.bg, borderBottom: `3px solid ${g.color}` }}>
+        <div className="grade-card-icon" style={{ background: g.color, color: "#fff" }}>{g.icon}</div>
+        <div><h3>{g.title}</h3><span>{g.range}</span></div>
+      </div>
+      <div className={`grade-card-body${collapsed ? ' collapsed' : ''}`}>
+        <ul className="grade-topics">
+          {g.topics.map((t, j) => (
+            <li key={j} style={{ "--check-color": g.color }}>{t}</li>
+          ))}
+        </ul>
+        <button className="grade-expand-btn" onClick={() => setCollapsed(c => !c)}>
+          {collapsed ? `▼ Show all ${g.topics.length} topics` : '▲ Show less'}
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const Science = () => {
+  useScrollReveal();
+
   return (
     <>
-      <PageHeader title="Science" />
-      <section className="tutoring">
-            <div className="container">
-                <h2 className="title text-center mt-5 mb-5" style={{ fontWeight: "bold" }} >Science Tutoring Services</h2>
-                <div className="text-center">
-                    <img className="m-auto animate__animated animate__lightSpeedInRight" src={scienceImg} width={"60%"} alt="" />
-                </div>
-                <div className="grid-container">
-                    <div className="grid-item">
-                        <h3>Curriculum-Specific Expertise</h3>
-                        <p>We offer specialized tutoring across multiple curricula, ensuring students excel in science subjects.</p>
-                        <ul>
-                            <li><strong>UK Curriculum:</strong> Key Stages 1-4, covering biology, chemistry, and physics.</li>
-                            <li><strong>USA Curriculum:</strong> NGSS & AP courses, including SAT & ACT preparation.</li>
-                            <li><strong>Australian Curriculum:</strong> NAPLAN preparation with scientific inquiry skills.</li>
-                            <li><strong>CBSE & International:</strong> General and specialized science tutoring.</li>
-                        </ul>
-                    </div>
-        
-                    <div className="grid-item">
-                        <h3>General Science (Grades 1-5)</h3>
-                        <p>Young learners develop foundational scientific knowledge through engaging and interactive lessons.</p>
-                        <ul>
-                            <li>Scientific Method, Living & Non-living Things</li>
-                            <li>Basic Human Biology, Earth & Space Science</li>
-                            <li>Plants & Animals, Matter & Energy</li>
-                        </ul>
-                    </div>
-        
-                    <div className="grid-item">
-                        <h3>Intermediate Science (Grades 6-8)</h3>
-                        <p>Students explore deeper concepts in biology, chemistry, and physics with real-world applications.</p>
-                        <ul>
-                            <li>Ecosystems, Cell Biology, Human Body Systems</li>
-                            <li>Earth Science, Chemistry & Physics Introduction</li>
-                        </ul>
-                    </div>
-        
-                    <div className="grid-item">
-                        <h3>Advanced Science (Grades 9-12)</h3>
-                        <p>High school students receive in-depth subject knowledge to prepare for exams and higher education.</p>
-                        <ul>
-                            <li>Chemistry: Atomic Structure, Periodic Table, Chemical Bonding</li>
-                            <li>Physics: Mechanics, Forces & Gravitation</li>
-                            <li>Electronics: Electric Circuits, Kirchhoff’s Laws</li>
-                        </ul>
-                    </div>
-        
-                    <div className="grid-item">
-                        <h3>Chemistry Tutoring</h3>
-                        <p>Master chemistry concepts with expert guidance tailored to your curriculum and learning needs.</p>
-                        <ul>
-                            <li><strong>Foundation Level (Grades 6-8):</strong>
-                                <ul>
-                                    <li>Matter & Its States: Solids, liquids, gases, and plasma.</li>
-                                    <li>Atomic Structure: Protons, neutrons, electrons, isotopes.</li>
-                                    <li>Periodic Table: Understanding element properties & trends.</li>
-                                    <li>Chemical Reactions: Balancing equations, reactants & products.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Intermediate Level (Grades 9-10):</strong>
-                                <ul>
-                                    <li>Chemical Bonding: Ionic, covalent, metallic bonding.</li>
-                                    <li>Moles & Stoichiometry: Avogadro’s number, molar mass calculations.</li>
-                                    <li>Energy Changes: Exothermic vs endothermic reactions.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Advanced Level (Grades 11-12):</strong>
-                                <ul>
-                                    <li>Thermochemistry: Enthalpy, entropy, Gibbs free energy.</li>
-                                    <li>Organic Chemistry: Functional groups, reaction mechanisms.</li>
-                                    <li>Electrochemistry: Redox reactions, voltaic & electrolytic cells.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-        
-                    <div className="grid-item">
-                        <h3>Physics Tutoring</h3>
-                        <p>Unlock the secrets of the universe with expert physics tutoring for all levels.</p>
-                        <ul>
-                            <li><strong>Foundation Level (Grades 6-8):</strong>
-                                <ul>
-                                    <li>Motion & Forces: Speed, velocity, acceleration, Newton’s Laws.</li>
-                                    <li>Energy & Work: Kinetic & potential energy, conservation of energy.</li>
-                                    <li>Electricity & Magnetism: Basic circuits, voltage, current.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Intermediate Level (Grades 9-10):</strong>
-                                <ul>
-                                    <li>Newtonian Mechanics: Equations of motion, momentum.</li>
-                                    <li>Waves & Optics: Reflection, refraction, wave-particle duality.</li>
-                                    <li>Electromagnetism: Magnetic fields, transformers.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Advanced Level (Grades 11-12):</strong>
-                                <ul>
-                                    <li>Quantum Mechanics: Photoelectric effect, Schrödinger equation.</li>
-                                    <li>Relativity & Cosmology: Einstein’s theories, black holes.</li>
-                                    <li>Thermal Physics: Kinetic theory, heat engines.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-        
-                    <div className="grid-item">
-                        <h3>Exam Preparation</h3>
-                        <p>We provide targeted preparation for major exams, ensuring students are fully prepared.</p>
-                        <ul>
-                            <li><strong>Chemistry Exams:</strong> GCSE, IGCSE, A-Level, AP, IB Chemistry.</li>
-                            <li><strong>Physics Exams:</strong> GCSE, IGCSE, A-Level, AP Physics 1 & 2, IB Physics.</li>
-                            <li><strong>Test Strategies:</strong> Past papers, time management, and problem-solving techniques.</li>
-                        </ul>
-                    </div>
-        
-                    
-                </div>
-            </div>
-        </section>
+      <Helmet>
+        <title>Science Tutoring — Biology, Chemistry & Physics | Mathedemic</title>
+        <meta
+          name="description"
+          content="Expert one-on-one Science tutoring covering Biology, Chemistry and Physics — GCSE, A-Level, AP, IB & NAPLAN. Personalised sessions for every year group and curriculum."
+        />
+        <link rel="canonical" href="https://mathedemic.com/subjects/science" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mathedemic.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Subjects", "item": "https://www.mathedemic.com/services"},
+            {"@type": "ListItem", "position": 3, "name": "Science", "item": "https://www.mathedemic.com/subjects/science"}
+          ]
+        })}</script>
+      </Helmet>
+
+      <PageHeader title="Science Tutoring" />
+
+      {/* Intro */}
+      <div className="subj-page-intro">
+        <div className="subj-page-intro-text reveal">
+          <span className="section-eyebrow">Core Subject</span>
+          <h1>Expert Science Tutoring — Biology, Chemistry &amp; Physics</h1>
+          <p>
+            From hands-on experiments in primary school to advanced A-Level theory — our specialist
+            Science tutors make complex concepts clear and build the deep understanding students need
+            to excel in every science exam.
+          </p>
+          <div className="curriculum-badges">
+            <span className="curr-badge">🇬🇧 GCSE &amp; A-Level</span>
+            <span className="curr-badge">🇺🇸 AP Sciences</span>
+            <span className="curr-badge">🌐 IB Science</span>
+            <span className="curr-badge">🇦🇺 NAPLAN</span>
+            <span className="curr-badge">AQA · Edexcel · OCR</span>
+          </div>
+          <a
+            href={waLink(WHATSAPP_BOOKING_MESSAGE)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            Book a Free Trial Lesson →
+          </a>
+        </div>
+        <div className="subj-page-intro-img reveal reveal-delay-2">
+          <img
+            src="/images/Mthedemic_Science_Tutoring_Services.png"
+            alt="Student exploring science concepts with a Mathedemic tutor"
+            width="560"
+            height="420"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      {/* Grade Level Cards */}
+      <section className="grade-cards-section">
+        <div className="grade-cards-inner">
+          <h2>What We Cover — By Grade Level</h2>
+          <p className="section-sub">
+            Structured Science content from Primary through to A-Level, AP and IB — aligned to your
+            exact curriculum and exam board.
+          </p>
+          <div className="grade-cards-grid">
+            {gradeLevels.map((g, i) => <GradeCard key={i} g={g} i={i} />)}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose */}
+      <div className="subj-why-section">
+        <div className="subj-why-text reveal">
+          <span className="section-eyebrow">Why Mathedemic</span>
+          <h2>Why Our Science Tutoring Gets Results</h2>
+          <p>
+            Science is built on understanding, not memorisation. Our tutors connect concepts to
+            real-world applications, making lessons engaging and exam preparation genuinely effective.
+          </p>
+          <ul className="subj-why-list">
+            {whyPoints.map((pt, i) => (
+              <li key={i}>
+                <span className="check-circle">✓</span>
+                {pt}
+              </li>
+            ))}
+          </ul>
+          <div className="subj-cta-btns" style={{ justifyContent: "flex-start" }}>
+            <a
+              href={waLink(WHATSAPP_BOOKING_MESSAGE)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Book Free Trial
+            </a>
+            <Link to="/fee-structure" className="btn-ghost">
+              View Fees →
+            </Link>
+          </div>
+        </div>
+        <div className="subj-why-image reveal reveal-delay-2">
+          <img
+            src="/images/Mathedemic_why_choose_us_2.png"
+            alt="Mathedemic one-on-one Science tutoring session"
+            width="520"
+            height="400"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      {/* Callout — advanced sciences page */}
+      <div className="subj-callout">
+        <div className="subj-callout-inner">
+          <p>
+            Looking for dedicated Physics, Chemistry or Biology tutoring? We have a separate page
+            covering advanced science subjects in detail.
+          </p>
+          <Link to="/subjects/science-subjects" className="btn-ghost">
+            View Physics, Chemistry &amp; Biology →
+          </Link>
+        </div>
+      </div>
+
+      {/* CTA Strip */}
+      <section className="subj-cta-strip">
+        <h2>Ready to Excel in Science?</h2>
+        <p>
+          Book a free 30-minute trial session. Whether it&apos;s Biology, Chemistry or Physics —
+          we have a specialist tutor ready for your child.
+        </p>
+        <div className="subj-cta-btns">
+          <a
+            href={waLink(WHATSAPP_BOOKING_MESSAGE)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+          >
+            📅 Book Free Trial
+          </a>
+        </div>
+      </section>
     </>
   );
 };
 
-export default ScienceTutoring;
+export default Science;

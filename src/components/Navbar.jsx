@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { waLink, WHATSAPP_BOOKING_MESSAGE } from "../constants/contact";
 import { Link, useLocation } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
   IconButton,
-  Menu,
-  MenuItem,
   Button,
   Box,
   Drawer,
@@ -15,421 +14,272 @@ import {
   Collapse,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+
+const navLink = (pathname, path) => ({
+  color: pathname === path ? "white" : "inherit",
+  textTransform: "none",
+  fontSize: { lg: '0.8rem', xl: '0.9375rem' },
+  whiteSpace: 'nowrap',
+  backgroundColor: pathname === path ? "#4281ff" : "transparent",
+  borderRadius: "4px",
+  padding: { lg: '6px 8px', xl: '6px 12px' },
+  "&:hover": {
+    backgroundColor: pathname === path ? "#3a75e6" : "#e9ecef",
+  },
+});
 
 const Navbar = () => {
   const location = useLocation();
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [feeMenuOpen, setFeeMenuOpen] = useState(false);
   const [aboutMenuOpen, setAboutMenuOpen] = useState(false);
-  const [feeAnchorEl, setFeeAnchorEl] = useState(null);
-  const [aboutAnchorEl, setAboutAnchorEl] = useState(null);
-
-  const handleNavToggle = () => setIsNavOpen(!isNavOpen);
-
-  const handleFeeMenuOpen = (event) => setFeeAnchorEl(event.currentTarget);
-  const handleFeeMenuClose = () => setFeeAnchorEl(null);
-
-  const handleAboutMenuOpen = (event) => setAboutAnchorEl(event.currentTarget);
-  const handleAboutMenuClose = () => setAboutAnchorEl(null);
+  const aboutMenuRef = useRef(null);
 
   const handleDrawerClose = () => setIsNavOpen(false);
 
-  // Check if the current path is related to fee structure
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (aboutMenuRef.current && !aboutMenuRef.current.contains(e.target)) {
+        setAboutMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const isFeeActive = location.pathname.includes("fee-structure");
-  
-  // Check if the current path is related to about or its subpages
-  const isAboutActive = 
-    location.pathname === "/about" || 
-    location.pathname === "/testimonial" || 
-    location.pathname === "/teacher-details" || 
-    location.pathname === "/faq" || 
+  const isTestPrepActive = location.pathname.startsWith("/test-prep");
+  const isAboutActive =
+    location.pathname === "/about" ||
+    location.pathname === "/testimonial" ||
+    location.pathname === "/teacher-details" ||
+    location.pathname === "/faq" ||
     location.pathname === "/terms-and-condition";
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "white", color: "black", boxShadow: "none" }}>
+    <AppBar position="static" sx={{ backgroundColor: "white", color: "black", boxShadow: "none", position: "relative", zIndex: 1200 }}>
       <Toolbar sx={{ justifyContent: "space-between" }}>
-        {/* Logo on the left */}
+        {/* Logo */}
         <Box sx={{ display: "flex", alignItems: "center", marginLeft: "50px" }}>
           <Link to="/">
-            <img 
-              src="/images/LOGO/PNG/Color Logo PNG.png" 
-              alt="Logo" 
-              style={{ height: "50px" }} 
+            <img
+              src="/images/LOGO/PNG/Color Logo PNG.png"
+              alt="Mathedemic Logo"
+              width="160"
+              height="50"
+              style={{ height: "50px", width: "auto" }}
             />
           </Link>
         </Box>
 
-        {/* Toggle Button for Mobile */}
+        {/* Mobile toggle */}
         <IconButton
           size="large"
           edge="start"
           color="inherit"
           aria-label="menu"
-          sx={{ display: { xs: "block", md: "none" } }}
-          onClick={handleNavToggle}
+          sx={{ display: { xs: "block", lg: "none" } }}
+          onClick={() => setIsNavOpen(!isNavOpen)}
         >
           <MenuIcon />
         </IconButton>
 
-        {/* Navbar Content for Desktop */}
+        {/* Desktop Nav */}
         <Box
           sx={{
-            display: { xs: "none", md: "flex" },
+            display: { xs: "none", lg: "flex" },
             flexDirection: "row",
             alignItems: "center",
-            gap: 2,
+            gap: { lg: 0.5, xl: 1.5 },
             position: "absolute",
             left: "50%",
             transform: "translateX(-50%)",
           }}
         >
-          {/* Home Link */}
+          <Button component={Link} to="/" sx={navLink(location.pathname, "/")}>Home</Button>
+
+          {/* Fee Structure — single link, no dropdown */}
           <Button
             component={Link}
-            to="/"
-            sx={{
-              color: location.pathname === "/" ? "white" : "inherit",
-              textTransform: "none",
-              fontSize: "1rem",
-              backgroundColor: location.pathname === "/" ? "#4281ff" : "transparent",
-              borderRadius: "4px",
-              padding: "6px 12px",
-              "&:hover": {
-                backgroundColor: location.pathname === "/" ? "#3a75e6" : "#e9ecef",
-              },
-            }}
-          >
-            Home
-          </Button>
-
-          {/* Fee Structure Dropdown */}
-          <Button
+            to="/fee-structure"
             sx={{
               color: isFeeActive ? "white" : "inherit",
               textTransform: "none",
-              fontSize: "1rem",
+              fontSize: { lg: '0.8rem', xl: '0.9375rem' },
+              whiteSpace: 'nowrap',
               backgroundColor: isFeeActive ? "#4281ff" : "transparent",
               borderRadius: "4px",
-              padding: "6px 12px",
-              "&:hover": {
-                backgroundColor: isFeeActive ? "#3a75e6" : "#e9ecef",
-              },
+              padding: { lg: '6px 8px', xl: '6px 12px' },
+              "&:hover": { backgroundColor: isFeeActive ? "#3a75e6" : "#e9ecef" },
             }}
-            onClick={handleFeeMenuOpen}
-            endIcon={<ArrowDropDownIcon />}
           >
             Fee Structure
           </Button>
-          <Menu
-            anchorEl={feeAnchorEl}
-            open={Boolean(feeAnchorEl)}
-            onClose={handleFeeMenuClose}
-          >
-            {[
-              { path: "/us-international-fee-structure", label: "For US & International" },
-              { path: "/uk-fee-structure", label: "For United Kingdom" },
-            ].map(({ path, label }) => (
-              <MenuItem
-                key={path}
-                component={Link}
-                to={path}
-                onClick={handleFeeMenuClose}
-                sx={{ 
-                  color: location.pathname === path ? "white" : "inherit",
-                  backgroundColor: location.pathname === path ? "#4281ff" : "transparent",
-                  "&:hover": {
-                    backgroundColor: location.pathname === path ? "#3a75e6" : "#e9ecef",
-                  },
-                }}
-              >
-                {label}
-              </MenuItem>
-            ))}
-          </Menu>
 
-          {/* Services Link */}
+          <Button component={Link} to="/services" sx={navLink(location.pathname, "/services")}>Services</Button>
           <Button
             component={Link}
-            to="/services"
+            to="/test-prep"
             sx={{
-              color: location.pathname === "/services" ? "white" : "inherit",
+              color: isTestPrepActive ? "white" : "inherit",
               textTransform: "none",
-              fontSize: "1rem",
-              backgroundColor: location.pathname === "/services" ? "#4281ff" : "transparent",
+              fontSize: { lg: '0.8rem', xl: '0.9375rem' },
+              whiteSpace: 'nowrap',
+              backgroundColor: isTestPrepActive ? "#4281ff" : "transparent",
               borderRadius: "4px",
-              padding: "6px 12px",
-              "&:hover": {
-                backgroundColor: location.pathname === "/services" ? "#3a75e6" : "#e9ecef",
-              },
+              padding: { lg: '6px 8px', xl: '6px 12px' },
+              "&:hover": { backgroundColor: isTestPrepActive ? "#3a75e6" : "#e9ecef" },
             }}
           >
-            Services
+            Test Prep
           </Button>
+          <Button component={Link} to="/contact" sx={navLink(location.pathname, "/contact")}>Contact</Button>
 
-          {/* Contact Link */}
-          <Button
-            component={Link}
-            to="/contact"
-            sx={{
-              color: location.pathname === "/contact" ? "white" : "inherit",
-              textTransform: "none",
-              fontSize: "1rem",
-              backgroundColor: location.pathname === "/contact" ? "#4281ff" : "transparent",
-              borderRadius: "4px",
-              padding: "6px 12px",
-              "&:hover": {
-                backgroundColor: location.pathname === "/contact" ? "#3a75e6" : "#e9ecef",
-              },
-            }}
-          >
-            Contact
-          </Button>
-
-          {/* About Dropdown */}
-          <Button
-            sx={{
-              color: isAboutActive ? "white" : "inherit",
-              textTransform: "none",
-              fontSize: "1rem",
-              backgroundColor: isAboutActive ? "#4281ff" : "transparent",
-              borderRadius: "4px",
-              padding: "6px 12px",
-              "&:hover": {
-                backgroundColor: isAboutActive ? "#3a75e6" : "#e9ecef",
-              },
-            }}
-            onClick={handleAboutMenuOpen}
-            endIcon={<ArrowDropDownIcon />}
-          >
-            About
-          </Button>
-          <Menu
-            anchorEl={aboutAnchorEl}
-            open={Boolean(aboutAnchorEl)}
-            onClose={handleAboutMenuClose}
-          >
-            <MenuItem
-              component={Link}
-              to="/about"
-              onClick={handleAboutMenuClose}
-              sx={{ 
-                color: location.pathname === "/about" ? "white" : "inherit",
-                backgroundColor: location.pathname === "/about" ? "#4281ff" : "transparent",
-                "&:hover": {
-                  backgroundColor: location.pathname === "/about" ? "#3a75e6" : "#e9ecef",
-                },
+          {/* About dropdown */}
+          <Box ref={aboutMenuRef} sx={{ position: "relative" }}>
+            <Button
+              onClick={() => setAboutMenuOpen(!aboutMenuOpen)}
+              endIcon={aboutMenuOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+              sx={{
+                color: isAboutActive ? "white" : "inherit",
+                textTransform: "none",
+                fontSize: { lg: '0.8rem', xl: '0.9375rem' },
+                whiteSpace: 'nowrap',
+                backgroundColor: isAboutActive ? "#4281ff" : "transparent",
+                borderRadius: "4px",
+                padding: { lg: '6px 8px', xl: '6px 12px' },
+                "&:hover": { backgroundColor: isAboutActive ? "#3a75e6" : "#e9ecef" },
               }}
             >
-              About Us
-            </MenuItem>
-            {[
-              { path: "/testimonial", label: "Testimonial" },
-              { path: "/teacher-details", label: "Teacher Single" },
-              { path: "/faq", label: "FAQ" },
-              { path: "/terms-and-condition", label: "Terms & Condition" },
-            ].map(({ path, label }) => (
-              <MenuItem
-                key={path}
-                component={Link}
-                to={path}
-                onClick={handleAboutMenuClose}
-                sx={{ 
-                  color: location.pathname === path ? "white" : "inherit",
-                  backgroundColor: location.pathname === path ? "#4281ff" : "transparent",
-                  "&:hover": {
-                    backgroundColor: location.pathname === path ? "#3a75e6" : "#e9ecef",
-                  },
-                }}
-              >
-                {label}
-              </MenuItem>
-            ))}
-          </Menu>
+              About
+            </Button>
+            {aboutMenuOpen && (
+              <Box sx={{
+                position: "absolute", top: "100%", left: 0, zIndex: 1300,
+                background: "#fff", borderRadius: "8px", boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
+                minWidth: "200px", py: 1,
+              }}>
+                {[
+                  { path: "/about", label: "About Us" },
+                  { path: "/teacher-details", label: "Our Tutors" },
+                  { path: "/faq", label: "FAQ" },
+                  { path: "/resources", label: "Resources" },
+                  { path: "/terms-and-condition", label: "Terms & Conditions" },
+                ].map(({ path, label }) => (
+                  <Box
+                    key={path}
+                    component={Link}
+                    to={path}
+                    onClick={() => setAboutMenuOpen(false)}
+                    sx={{
+                      display: "block",
+                      px: 2, py: 1,
+                      color: location.pathname === path ? "#4281FF" : "#374151",
+                      fontWeight: location.pathname === path ? 700 : 400,
+                      fontSize: "14px",
+                      textDecoration: "none",
+                      "&:hover": { background: "#F3F4F6", color: "#4281FF" },
+                    }}
+                  >
+                    {label}
+                  </Box>
+                ))}
+              </Box>
+            )}
+          </Box>
+
+          {/* Get Free Trial CTA */}
+          <Button
+            component="a"
+            href={waLink(WHATSAPP_BOOKING_MESSAGE)}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              backgroundColor: '#4281FF',
+              color: '#FFFFFF',
+              borderRadius: '8px',
+              padding: { lg: '7px 14px', xl: '8px 20px' },
+              textTransform: 'none',
+              fontWeight: 600,
+              fontSize: { lg: '0.8rem', xl: '0.9rem' },
+              whiteSpace: 'nowrap',
+              marginLeft: { lg: '4px', xl: '8px' },
+              '&:hover': { backgroundColor: '#2d6ee8', transform: 'translateY(-1px)', color: '#FFFFFF' },
+              transition: 'background-color 0.2s, transform 0.15s',
+            }}
+          >
+            Get Free Trial
+          </Button>
         </Box>
 
-        {/* Empty Box for spacing on the right side */}
-        <Box sx={{ display: { xs: "none", md: "block" }, width: "150px" }}></Box>
+        <Box sx={{ display: { xs: "none", lg: "block" }, width: "8px" }}></Box>
 
-        {/* Drawer for Mobile */}
+        {/* Mobile Drawer */}
         <Drawer
           anchor="left"
           open={isNavOpen}
           onClose={handleDrawerClose}
-          sx={{ display: { xs: "block", md: "none" } }}
+          sx={{ display: { xs: "block", lg: "none" } }}
         >
-          <Box
-            sx={{ width: 250 }}
-            role="presentation"
-            onClick={(e) => e.stopPropagation()} // Prevent Drawer from closing
-            onKeyDown={(e) => e.stopPropagation()} // Prevent Drawer from closing
-          >
-            {/* Logo in Drawer */}
+          <Box sx={{ width: 250 }} role="presentation" onClick={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
             <Box sx={{ p: 2, display: "flex", justifyContent: "center" }}>
               <Link to="/" onClick={handleDrawerClose}>
-                <img 
-                  src="/images/LOGO/PNG/Color Logo PNG.png" 
-                  alt="Logo" 
-                  style={{ height: "40px" }} 
-                />
+                <img src="/images/LOGO/PNG/Color Logo PNG.png" alt="Mathedemic Logo" style={{ height: "40px" }} />
               </Link>
             </Box>
-            
             <List>
-              {/* Home Link */}
-              <ListItem
-                component={Link}
-                to="/"
-                onClick={handleDrawerClose} // Close Drawer when clicking a link
-                sx={{
-                  color: location.pathname === "/" ? "white" : "inherit",
-                  textTransform: "none",
-                  fontSize: "1rem",
-                  backgroundColor: location.pathname === "/" ? "#4281ff" : "transparent",
-                  "&:hover": {
-                    backgroundColor: location.pathname === "/" ? "#3a75e6" : "#e9ecef",
-                  },
-                }}
-              >
+              <ListItem component={Link} to="/" onClick={handleDrawerClose}
+                sx={{ color: location.pathname === "/" ? "white" : "inherit", backgroundColor: location.pathname === "/" ? "#4281ff" : "transparent", "&:hover": { backgroundColor: "#e9ecef" } }}>
                 <ListItemText primary="Home" />
               </ListItem>
 
-              {/* Fee Structure Dropdown */}
-              <ListItem 
-                button 
-                onClick={() => setFeeMenuOpen(!feeMenuOpen)}
-                sx={{
-                  backgroundColor: isFeeActive ? "#4281ff" : "transparent",
-                  color: isFeeActive ? "white" : "inherit",
-                  "&:hover": {
-                    backgroundColor: isFeeActive ? "#3a75e6" : "#e9ecef",
-                  },
-                }}
-              >
+              <ListItem component={Link} to="/fee-structure" onClick={handleDrawerClose}
+                sx={{ color: isFeeActive ? "white" : "inherit", backgroundColor: isFeeActive ? "#4281ff" : "transparent", "&:hover": { backgroundColor: "#e9ecef" } }}>
                 <ListItemText primary="Fee Structure" />
-                {feeMenuOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
               </ListItem>
-              <Collapse in={feeMenuOpen} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
-                  {[
-                    { path: "/us-international-fee-structure", label: "For US & International" },
-                    { path: "/uk-fee-structure", label: "For United Kingdom" },
-                  ].map(({ path, label }) => (
-                    <ListItem
-                      key={path}
-                      component={Link}
-                      to={path}
-                      onClick={handleDrawerClose} // Close Drawer when clicking a link
-                      sx={{
-                        pl: 4,
-                        color: location.pathname === path ? "white" : "inherit",
-                        backgroundColor: location.pathname === path ? "#4281ff" : "transparent",
-                        "&:hover": {
-                          backgroundColor: location.pathname === path ? "#3a75e6" : "#e9ecef",
-                        },
-                      }}
-                    >
-                      <ListItemText primary={label} />
-                    </ListItem>
-                  ))}
-                </List>
-              </Collapse>
 
-              {/* Services Link */}
-              <ListItem
-                component={Link}
-                to="/services"
-                onClick={handleDrawerClose} // Close Drawer when clicking a link
-                sx={{
-                  color: location.pathname === "/services" ? "white" : "inherit",
-                  textTransform: "none",
-                  fontSize: "1rem",
-                  backgroundColor: location.pathname === "/services" ? "#4281ff" : "transparent",
-                  "&:hover": {
-                    backgroundColor: location.pathname === "/services" ? "#3a75e6" : "#e9ecef",
-                  },
-                }}
-              >
+              <ListItem component={Link} to="/services" onClick={handleDrawerClose}
+                sx={{ color: location.pathname === "/services" ? "white" : "inherit", backgroundColor: location.pathname === "/services" ? "#4281ff" : "transparent", "&:hover": { backgroundColor: "#e9ecef" } }}>
                 <ListItemText primary="Services" />
               </ListItem>
 
-              {/* Contact Link */}
-              <ListItem
-                component={Link}
-                to="/contact"
-                onClick={handleDrawerClose} // Close Drawer when clicking a link
-                sx={{
-                  color: location.pathname === "/contact" ? "white" : "inherit",
-                  textTransform: "none",
-                  fontSize: "1rem",
-                  backgroundColor: location.pathname === "/contact" ? "#4281ff" : "transparent",
-                  "&:hover": {
-                    backgroundColor: location.pathname === "/contact" ? "#3a75e6" : "#e9ecef",
-                  },
-                }}
-              >
+              <ListItem component={Link} to="/test-prep" onClick={handleDrawerClose}
+                sx={{ color: isTestPrepActive ? "white" : "inherit", backgroundColor: isTestPrepActive ? "#4281ff" : "transparent", "&:hover": { backgroundColor: "#e9ecef" } }}>
+                <ListItemText primary="Test Prep" />
+              </ListItem>
+
+              <ListItem component={Link} to="/contact" onClick={handleDrawerClose}
+                sx={{ color: location.pathname === "/contact" ? "white" : "inherit", backgroundColor: location.pathname === "/contact" ? "#4281ff" : "transparent", "&:hover": { backgroundColor: "#e9ecef" } }}>
                 <ListItemText primary="Contact" />
               </ListItem>
 
-              {/* About Dropdown */}
-              <ListItem 
-                button 
-                onClick={() => setAboutMenuOpen(!aboutMenuOpen)}
-                sx={{
-                  backgroundColor: isAboutActive ? "#4281ff" : "transparent",
-                  color: isAboutActive ? "white" : "inherit",
-                  "&:hover": {
-                    backgroundColor: isAboutActive ? "#3a75e6" : "#e9ecef",
-                  },
-                }}
-              >
+              <ListItem button onClick={() => setAboutMenuOpen(!aboutMenuOpen)}
+                sx={{ backgroundColor: isAboutActive ? "#4281ff" : "transparent", color: isAboutActive ? "white" : "inherit", "&:hover": { backgroundColor: "#e9ecef" } }}>
                 <ListItemText primary="About" />
                 {aboutMenuOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
               </ListItem>
               <Collapse in={aboutMenuOpen} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                  <ListItem
-                    component={Link}
-                    to="/about"
-                    onClick={handleDrawerClose} // Close Drawer when clicking a link
-                    sx={{
-                      pl: 4,
-                      color: location.pathname === "/about" ? "white" : "inherit",
-                      backgroundColor: location.pathname === "/about" ? "#4281ff" : "transparent",
-                      "&:hover": {
-                        backgroundColor: location.pathname === "/about" ? "#3a75e6" : "#e9ecef",
-                      },
-                    }}
-                  >
-                    <ListItemText primary="About Us" />
-                  </ListItem>
                   {[
-                    { path: "/testimonial", label: "Testimonial" },
-                    { path: "/teacher-details", label: "Teacher Single" },
+                    { path: "/about", label: "About Us" },
+                    { path: "/teacher-details", label: "Our Tutors" },
                     { path: "/faq", label: "FAQ" },
-                    { path: "/terms-and-condition", label: "Terms & Condition" },
+                    { path: "/resources", label: "Resources" },
+                    { path: "/terms-and-condition", label: "Terms & Conditions" },
                   ].map(({ path, label }) => (
-                    <ListItem
-                      key={path}
-                      component={Link}
-                      to={path}
-                      onClick={handleDrawerClose} // Close Drawer when clicking a link
-                      sx={{
-                        pl: 4,
-                        color: location.pathname === path ? "white" : "inherit",
-                        backgroundColor: location.pathname === path ? "#4281ff" : "transparent",
-                        "&:hover": {
-                          backgroundColor: location.pathname === path ? "#3a75e6" : "#e9ecef",
-                        },
-                      }}
-                    >
+                    <ListItem key={path} component={Link} to={path} onClick={handleDrawerClose}
+                      sx={{ pl: 4, color: location.pathname === path ? "white" : "inherit", backgroundColor: location.pathname === path ? "#4281ff" : "transparent", "&:hover": { backgroundColor: "#e9ecef" } }}>
                       <ListItemText primary={label} />
                     </ListItem>
                   ))}
                 </List>
               </Collapse>
+
+              <ListItem component="a" href={waLink(WHATSAPP_BOOKING_MESSAGE)} target="_blank" rel="noopener noreferrer" onClick={handleDrawerClose}
+                sx={{ backgroundColor: '#4281FF', color: '#FFFFFF', borderRadius: '8px', margin: '12px 8px 4px', fontWeight: 600, justifyContent: 'center', '&:hover': { backgroundColor: '#2d6ee8', color: '#FFFFFF' } }}>
+                <ListItemText primary="Get Free Trial" sx={{ textAlign: 'center' }} />
+              </ListItem>
             </List>
           </Box>
         </Drawer>

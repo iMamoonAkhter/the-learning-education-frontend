@@ -5,6 +5,7 @@ url("../fonts/flaticon_education.woff?877ec50832e2fc0503090eb64151d07e") format(
 url("../fonts/flaticon_education.woff2?877ec50832e2fc0503090eb64151d07e") format("woff2"),
 url("../fonts/flaticon_education.eot?877ec50832e2fc0503090eb64151d07e#iefix") format("embedded-opentype"),
 url("../fonts/flaticon_education.svg?877ec50832e2fc0503090eb64151d07e#flaticon_education") format("svg");
+    font-display: swap;
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {

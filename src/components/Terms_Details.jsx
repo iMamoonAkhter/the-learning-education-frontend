@@ -24,7 +24,7 @@ const TermsDetails = () => {
         </ul>
         <h3>1.2 Student Absence</h3>
         <ul>
-          <li>Students must provide at least 8 hours' notice to reschedule a missed class.</li>
+          <li>Students must provide at least 8 hours' prior notice to reschedule a missed class.</li>
           <li>Missed classes without notice will be considered completed and are non-refundable.</li>
           <li>Medical emergencies may be considered with proper documentation.</li>
         </ul>

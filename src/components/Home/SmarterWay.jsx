@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 
 const SmarterWay = () => {
   return (
@@ -11,12 +12,12 @@ const SmarterWay = () => {
               <div className="wpo-about-img-wrap">
                 <div className="wpo-about-img-left">
                   <div className="wpo-about-img">
-                    <img src="/images/2nd_Section_Large.png" alt="About Us" />
+                    <img src="/images/2nd_Section_Large.png" alt="Student learning online with a tutor" width="520" height="440" loading="lazy" />
                   </div>
                 </div>
                 <div className="wpo-about-img-right">
                   <div className="wpo-about-img-inner">
-                    <img src="/images/2nd_Section_small.png" alt="About Us" />
+                    <img src="/images/2nd_Section_small.png" alt="Tutor session" width="240" height="280" loading="lazy" />
                   </div>
                   <div className="exprience-wrap">
                     <div className="exprience">
@@ -82,9 +83,9 @@ const SmarterWay = () => {
                 </div>
 
                 {/* Button */}
-                <a href="/about" className="theme-btn-s2">
+                <Link to="/teaching-methods" className="theme-btn-s2">
                   Learn More About Teaching Methods
-                </a>
+                </Link>
               </div>
             </div>
           </div>

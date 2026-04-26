@@ -1,41 +1,69 @@
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import "../../style/couse-section.css"
-import Carousel from "./SubjectSlider";
+import { Link } from "react-router-dom";
+import { waLink, WHATSAPP_BOOKING_MESSAGE } from "../../constants/contact";
 
+const subjects = [
+  { icon: '∑',   label: 'Mathematics',               color: '#4281FF', bg: '#EEF4FF', desc: 'GCSE · A-Level · SAT · IB · AP',        to: '/subjects/maths' },
+  { icon: '📖',  label: 'English',                   color: '#F59E0B', bg: '#FFF8D6', desc: 'Language · Literature · Writing · SAT',  to: '/subjects/english' },
+  { icon: '⚗️',  label: 'Science',                   color: '#FF9682', bg: '#FFF0EE', desc: 'General Science · Grades 1–8',           to: '/subjects/science' },
+  { icon: '🔬',  label: 'Physics, Chemistry & Biology', color: '#8B5CF6', bg: '#F3F0FF', desc: 'Advanced Science · Grades 9–12',      to: '/subjects/science-subjects' },
+  { icon: '📝',  label: 'SAT / ACT Prep',            color: '#8B5CF6', bg: '#F3F0FF', desc: 'US College Entrance Exams',    to: '/test-prep/sat-act' },
+  { icon: '🎓',  label: 'GCSE & A-Level',            color: '#10B981', bg: '#ECFDF5', desc: 'UK Curriculum · All Subjects' },
+  { icon: '🌐',  label: 'IB Programme',              color: '#4281FF', bg: '#EEF4FF', desc: 'International Baccalaureate' },
+  { icon: '🇦🇺', label: 'NAPLAN',                    color: '#FF9682', bg: '#FFF0EE', desc: 'Australian Curriculum',         href: '/test-prep/sat-act#naplan' },
+  { icon: '🌍',  label: 'History & Geography',       color: '#6B7280', bg: '#F3F4F6', desc: 'Humanities · All Year Groups' },
+  { icon: '⚡',  label: 'Physics',                   color: '#4281FF', bg: '#EEF4FF', desc: 'Mechanics · Waves · Electricity',        href: '/subjects/science-subjects#physics' },
+  { icon: '🧪',  label: 'Chemistry',                 color: '#FF9682', bg: '#FFF0EE', desc: 'GCSE · A-Level · IB · Organic',          href: '/subjects/science-subjects#chemistry' },
+  { icon: '🌿',  label: 'Biology',                   color: '#10B981', bg: '#ECFDF5', desc: 'GCSE · A-Level · IB · Human Biology',    href: '/subjects/science-subjects#biology' },
+];
 
 const CourseSection = () => {
   return (
-    <section className="wpo-courses-section section-padding">
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="wpo-section-title-s2">
-              <small>We Offer</small>
-              <h2>
-                Explore{" "}
-                <span>
-                  Subjects
-                  <span className="shape">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 206 53"
-                      fill="none"
-                    >
-                      <path d="M152.182 2.58319C107.878 0.889793 54.8748 6.13932 21.2281 18.6943C14.2699 21.4407 7.93951 24.7738 5.70192 28.7128C4.27488 31.2398 5.03121 33.954 7.69121 36.2925C14.8835 42.3911 31.9822 45.4011 46.8006 47.3115C78.3067 51.0179 113.672 51.7406 145.489 48.3204C167.194 46.0009 200.667 39.5923 199.399 28.5709C198.543 20.0621 180.437 14.5729 162.979 11.6178C138.219 7.469 111.131 6.00576 84.5743 5.86862C71.32 5.85789 58.0913 6.85723 45.6675 8.78436C33.512 10.7186 21.2709 13.4317 12.6602 17.5817C11.2246 18.2877 8.62449 17.4553 9.9973 16.6813C20.7486 11.2493 38.0215 7.73493 53.9558 5.76368C77.1194 2.90994 101.75 3.75426 125.339 5.14356C158.167 7.2615 207.554 13.5139 204.928 30.7413C203.629 36.0898 194.762 40.5057 184.681 43.5503C156.563 51.768 119.114 53.6844 85.6331 52.5265C65.1694 51.7477 44.4831 50.1855 25.9972 46.2442C11.4129 43.1186 -1.0337 37.8297 0.0679738 30.5063C2.14003 19.9035 31.4913 12.0006 52.6201 7.98775C71.2971 4.45904 91.3384 2.2302 111.674 1.24636C125.228 0.595237 138.962 0.539188 152.536 1.15931C153.475 1.20224 154.154 1.55523 154.051 1.94876C153.951 2.33872 153.115 2.62135 152.182 2.58319Z" />
-                    </svg>
-                  </span>
-                </span>{" "}
-                By Category
-              </h2>
-            </div>
-          </div>
-        </div>
-
-       <Carousel />
+    <section className="subjects-explorer">
+      <div className="subjects-explorer-header">
+        <span className="section-eyebrow">We Offer</span>
+        <h2>
+          Explore Subjects <span style={{ color: '#4281FF' }}>By Category</span>
+        </h2>
+        <p>Expert tutors for every subject, every curriculum, every level.</p>
       </div>
 
-      
+      <div className="subjects-grid">
+        {subjects.map((s, i) => {
+          const inner = (
+            <>
+              <span className="subject-pill-icon">{s.icon}</span>
+              <div className="subject-pill-text">
+                <strong>{s.label}</strong>
+                <small>{s.desc}</small>
+              </div>
+              <span className="subject-pill-arrow">→</span>
+            </>
+          );
+          const pillStyle = { '--pill-color': s.color, '--pill-bg': s.bg };
+          if (s.to) {
+            return <Link key={i} to={s.to} className="subject-pill" style={pillStyle}>{inner}</Link>;
+          }
+          if (s.href) {
+            return <a key={i} href={s.href} className="subject-pill" style={pillStyle}>{inner}</a>;
+          }
+          return (
+            <a key={i} href={waLink(WHATSAPP_BOOKING_MESSAGE)} target="_blank" rel="noopener noreferrer" className="subject-pill" style={pillStyle}>
+              {inner}
+            </a>
+          );
+        })}
+      </div>
+
+      <div style={{ textAlign: 'center', marginTop: '40px' }}>
+        <a
+          href={waLink(WHATSAPP_BOOKING_MESSAGE)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary"
+        >
+          📅 Book a Free Trial Session
+        </a>
+      </div>
     </section>
   );
 };

@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 import PageHeader from "../components/PageHeader";
 import "../style/Faq.css";
 
@@ -150,7 +151,7 @@ const FAQ = () => {
     onSubmit: handleSubmit,
   });
 
-  const [activeId, setActiveId] = useState(null);
+  const [activeId, setActiveId] = useState(1);
 
   const handleTextToggle = (id) => {
     setActiveId((prevId) => (prevId === id ? null : id));
@@ -158,6 +159,19 @@ const FAQ = () => {
 
   return (
     <>
+      <Helmet>
+        <title>FAQ — Common Questions About Mathedemic Tutoring</title>
+        <meta name="description" content="Got questions about Mathedemic's online tutoring? Find answers about how sessions work, payment, scheduling, technical requirements, and more." />
+        <link rel="canonical" href="https://mathedemic.com/faq" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mathedemic.com/"},
+            {"@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://www.mathedemic.com/faq"}
+          ]
+        })}</script>
+      </Helmet>
       <PageHeader title="FAQ" />
       <section className="wpo-faq-section section-padding">
         <div className="container">

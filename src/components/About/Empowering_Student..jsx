@@ -1,6 +1,29 @@
-
+import { useEffect, useRef } from 'react';
+import Typed from 'typed.js';
 
 const EmpoweringStudent = () => {
+  const aboutTypedEl = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(aboutTypedEl.current, {
+      strings: [
+        'Personalized Learning',
+        'Tailored Education',
+        'Dedicated Mentorship',
+        'Individualized Plans',
+        'Proven Strategies',
+        'Expert Guidance',
+        'Lasting Results',
+      ],
+      typeSpeed: 65,
+      backSpeed: 35,
+      backDelay: 2000,
+      loop: true,
+      smartBackspace: true,
+    });
+    return () => typed.destroy();
+  }, []);
+
   return (
     <section className="wpo-about-section section-padding">
       <div className="container">
@@ -11,12 +34,12 @@ const EmpoweringStudent = () => {
               <div className="wpo-about-img-wrap">
                 <div className="wpo-about-img-left">
                   <div className="wpo-about-img">
-                    <img src="/images/about/About_Us_Large.png" alt="About Us" />
+                    <img src="/images/about/About_Us_Large.png" alt="Mathedemic tutoring team" width="520" height="440" loading="lazy" />
                   </div>
                 </div>
                 <div className="wpo-about-img-right">
                   <div className="wpo-about-img-inner">
-                    <img src="/images/about/About_Us_small.png" alt="About Us" />
+                    <img src="/images/about/About_Us_small.png" alt="Student learning" width="240" height="280" loading="lazy" />
                   </div>
                   <div className="exprience-wrap">
                     <div className="exprience">
@@ -36,14 +59,19 @@ const EmpoweringStudent = () => {
             {/* Right Side - Text Content */}
             <div className="col-lg-6 col-md-12 col-12">
               <div className="wpo-about-text">
-              <div className="wpo-section-title">
-                                    <small>About Us</small>
-                                    <h2>Empowering Students Through Personalized Learning</h2>
-                                </div>
-                                <p>What started as a small initiative has evolved into a leading global tutoring platform. Over the past five years, we have worked with students across the <strong>UK, USA, Australia, and beyond</strong>, providing tailored academic support.</p>
-        
-                                <p>We believe that <strong>every student is unique</strong>, which is why we offer <strong>personalized lesson plans</strong>, expert mentorship, and interactive learning experiences. Our team of <strong>highly skilled tutors</strong> specializes in subjects ranging from Mathematics and Science to Test Preparation (SAT, ACT, GCSE, A-Level, IB, NAPLAN), and more.</p>
-                
+                <div className="wpo-section-title">
+                  <small>About Us</small>
+                  <h2>
+                    Empowering Students Through{' '}
+                    <span style={{ color: '#4281FF', fontStyle: 'italic', display: 'inline-block' }}>
+                      <span ref={aboutTypedEl}></span>
+                    </span>
+                  </h2>
+                </div>
+                <p>What started as a small initiative has evolved into a leading global tutoring platform. Over the past five years, we have worked with students across the <strong>UK, USA, Australia, and beyond</strong>, providing tailored academic support.</p>
+
+                <p>We believe that <strong>every student is unique</strong>, which is why we offer <strong>personalized lesson plans</strong>, expert mentorship, and interactive learning experiences. Our team of <strong>highly skilled tutors</strong> specializes in subjects ranging from Mathematics and Science to Test Preparation (SAT, ACT, GCSE, A-Level, IB, NAPLAN), and more.</p>
+
                 {/* Features */}
                 <div className="wpo-about-features-wrap">
                   {[
@@ -64,8 +92,6 @@ const EmpoweringStudent = () => {
                     </div>
                   ))}
                 </div>
-
-               
               </div>
             </div>
           </div>

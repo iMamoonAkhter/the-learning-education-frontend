@@ -27,7 +27,7 @@ const Footer = () => {
                 <div className="widget about-widget">
                   <div className="logo widget-title">
                     <Link style={footerLinkStyle} className="navbar-brand" to="/" onClick={scrollToTop}>
-                      <img src={logo} alt={tutoring.service_name} />
+                      <img src={logo} alt={tutoring.service_name} width="160" height="48" loading="lazy" />
                     </Link>
                   </div>
                   <p>
@@ -103,7 +103,7 @@ const Footer = () => {
                   <ul>
                     <li>
                       <Link style={footerLinkStyle} to="/terms-and-condition" onClick={scrollToTop}>
-                        Terms & Condition
+                        Terms & Conditions
                       </Link>
                     </li>
                     <li>
@@ -113,12 +113,27 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link style={footerLinkStyle} to="/teacher-details" onClick={scrollToTop}>
-                        Teacher
+                        Our Tutors
                       </Link>
                     </li>
                     <li>
                       <Link style={footerLinkStyle} to="/faq" onClick={scrollToTop}>
                         FAQ
+                      </Link>
+                    </li>
+                    <li>
+                      <Link style={footerLinkStyle} to="/teaching-methods" onClick={scrollToTop}>
+                        Teaching Methods
+                      </Link>
+                    </li>
+                    <li>
+                      <Link style={footerLinkStyle} to="/test-prep" onClick={scrollToTop}>
+                        Test Preparation
+                      </Link>
+                    </li>
+                    <li>
+                      <Link style={footerLinkStyle} to="/test-prep/sat-act" onClick={scrollToTop}>
+                        SAT &amp; ACT Prep
                       </Link>
                     </li>
                   </ul>
@@ -140,9 +155,6 @@ const Footer = () => {
                         <i className="fi flaticon-phone-call"></i>
                         <p>{teacher.phone}</p>
                       </li>
-                      <li>
-                        <i className="fi flaticon-placeholder"></i> {teacher.address}
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -158,7 +170,7 @@ const Footer = () => {
               <div className="col-12 col-md-6">
                 <ul>
                   <li>
-                    &copy; 2023 <Link style={footerLinkStyle} to="/" onClick={scrollToTop}>{tutoring.service_name}</Link>. All rights reserved.
+                    &copy; 2025 <Link style={footerLinkStyle} to="/" onClick={scrollToTop}>{tutoring.service_name}</Link>. All rights reserved.
                   </li>
                 </ul>
               </div>

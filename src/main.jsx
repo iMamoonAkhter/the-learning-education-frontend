@@ -1,5 +1,5 @@
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import Global from "./utils/global.jsx";
@@ -11,9 +11,13 @@ import store from "./redux/store.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { MantineProvider } from "@mantine/core";
+import { HelmetProvider } from "react-helmet-async";
 
-createRoot(document.getElementById("root")).render(
+const rootElement = document.getElementById("root");
+
+const app = (
   <StrictMode>
+    <HelmetProvider>
     <MantineProvider withGlobalStyles withNormalizeCSS>
     <Provider store={store}>
       <ToastContainer
@@ -33,5 +37,12 @@ createRoot(document.getElementById("root")).render(
       <App />
     </Provider>
     </MantineProvider>
+    </HelmetProvider>
   </StrictMode>
 );
+
+if (rootElement.hasChildNodes()) {
+  hydrateRoot(rootElement, app);
+} else {
+  createRoot(rootElement).render(app);
+}
