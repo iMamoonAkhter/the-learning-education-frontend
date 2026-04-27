@@ -82,7 +82,7 @@ const Fee_Structure = () => {
       <Helmet>
         <title>{isUK ? 'UK Fee Structure' : 'US Fee Structure'} — Affordable Online Tutoring | Mathedemic</title>
         <meta name="description" content="View Mathedemic's transparent tutoring fee plans. Flexible monthly plans from 2 to 5 days per week. First session free." />
-        <link rel="canonical" href={`https://mathedemic.com/${isUK ? 'uk-fee-structure' : 'us-international-fee-structure'}`} />
+        <link rel="canonical" href={`https://www.mathedemic.com/${isUK ? 'uk-fee-structure' : 'us-international-fee-structure'}`} />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

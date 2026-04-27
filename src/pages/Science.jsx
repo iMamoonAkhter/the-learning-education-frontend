@@ -110,7 +110,7 @@ const Science = () => {
           name="description"
           content="Expert one-on-one Science tutoring covering Biology, Chemistry and Physics — GCSE, A-Level, AP, IB & NAPLAN. Personalised sessions for every year group and curriculum."
         />
-        <link rel="canonical" href="https://mathedemic.com/subjects/science" />
+        <link rel="canonical" href="https://www.mathedemic.com/subjects/science" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

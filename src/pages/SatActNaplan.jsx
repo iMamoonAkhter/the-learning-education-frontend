@@ -197,7 +197,7 @@ const SatActNaplan = () => {
           name="description"
           content="Specialist SAT, ACT, and NAPLAN test preparation tutoring. Full-length practice tests, personalised study plans, and expert strategies for every year level and target score."
         />
-        <link rel="canonical" href="https://mathedemic.com/test-prep/sat-act" />
+        <link rel="canonical" href="https://www.mathedemic.com/test-prep/sat-act" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

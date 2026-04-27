@@ -300,7 +300,7 @@ const Contact = () => {
       <Helmet>
         <title>Contact Us — Mathedemic Online Tutoring</title>
         <meta name="description" content="Get in touch with Mathedemic. Chat on WhatsApp, email us, or fill in the contact form. We respond within 2 hours." />
-        <link rel="canonical" href="https://mathedemic.com/contact" />
+        <link rel="canonical" href="https://www.mathedemic.com/contact" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

@@ -64,7 +64,7 @@ const EmpoweringStudent = () => {
                   <h2>
                     Empowering Students Through{' '}
                     <span style={{ color: '#4281FF', fontStyle: 'italic', display: 'inline-block' }}>
-                      <span ref={aboutTypedEl}></span>
+                      <span ref={aboutTypedEl}>Personalized Learning</span>
                     </span>
                   </h2>
                 </div>

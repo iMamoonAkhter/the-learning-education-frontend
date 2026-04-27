@@ -42,7 +42,7 @@ const US_Internation_Details = () => {
       <Helmet>
         <title>US & International Fee Structure — Affordable Online Tutoring | Mathedemic</title>
         <meta name="description" content="View Mathedemic's transparent US and international tutoring fee plans. Affordable one-to-one online tutoring for Grades K–12. First session free." />
-        <link rel="canonical" href="https://mathedemic.com/us-international-fee-structure" />
+        <link rel="canonical" href="https://www.mathedemic.com/us-international-fee-structure" />
       </Helmet>
       <section style={{ paddingTop: "60px", background: "#FAFAFA", minHeight: "60vh" }}>
         <div style={{ textAlign: "center", padding: "0 24px 40px" }}>

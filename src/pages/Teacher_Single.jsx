@@ -192,7 +192,7 @@ const Teacher_Single = () => (
     <Helmet>
       <title>Meet Our Expert Tutors — Mathedemic</title>
       <meta name="description" content="Meet the Mathedemic team — qualified, experienced tutors specialising in Mathematics, Science, English, and more. Book a free trial with any of our tutors today." />
-      <link rel="canonical" href="https://mathedemic.com/teacher-details" />
+      <link rel="canonical" href="https://www.mathedemic.com/teacher-details" />
       <script type="application/ld+json">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",

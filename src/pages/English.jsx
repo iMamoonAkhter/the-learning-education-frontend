@@ -110,7 +110,7 @@ const English = () => {
           name="description"
           content="Expert one-on-one English Language and Literature tutoring — GCSE, A-Level, SAT, ACT & IB. Reading comprehension, essay writing, grammar and critical analysis for all year groups."
         />
-        <link rel="canonical" href="https://mathedemic.com/subjects/english" />
+        <link rel="canonical" href="https://www.mathedemic.com/subjects/english" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

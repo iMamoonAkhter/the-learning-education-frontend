@@ -10,7 +10,7 @@ const stats = [
 ];
 
 const AnimatedCounter = ({ target }) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(target);
   const elRef = useRef(null);
   const started = useRef(false);
 

@@ -110,7 +110,7 @@ const Mathematics = () => {
           name="description"
           content="Expert one-on-one Mathematics tutoring for all levels — GCSE, A-Level, SAT, ACT, IB, AP & NAPLAN. Personalised sessions covering every UK, US, and International curriculum."
         />
-        <link rel="canonical" href="https://mathedemic.com/subjects/maths" />
+        <link rel="canonical" href="https://www.mathedemic.com/subjects/maths" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

@@ -32,8 +32,8 @@ const Footer = () => {
                   </div>
                   <p>
                     Empowering students worldwide with personalized learning for over 5 years. At
-                    Mathedemic, our expert tutors specialize in Mathematics, Science, and Test
-                    Preparation (SAT, ACT, GCSE, A-Level, IB, NAPLAN). Join us for tailored academic
+                    Mathedemic, our expert tutors specialize in Mathematics, English, Science, and
+                    Test Preparation (SAT, ACT, GCSE, A-Level, IB, NAPLAN). Join us for tailored academic
                     support and proven results.
                   </p>
                   <div className="social">
@@ -107,7 +107,7 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link style={footerLinkStyle} to="/why-choose-us" onClick={scrollToTop}>
+                      <Link style={footerLinkStyle} to="/about" onClick={scrollToTop}>
                         Why Choose Us
                       </Link>
                     </li>

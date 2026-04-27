@@ -6,39 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "react-snap || echo react-snap finished with warnings",
     "build:full": "npm run build && python scripts/generate_markdown_mirrors.py && python scripts/update_llms_mirrors.py",
     "lint": "eslint .",
     "preview": "vite preview"
-  },
-  "reactSnap": {
-    "source": "dist",
-    "destination": "dist",
-    "skipThirdPartyRequests": true,
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox"
-    ],
-    "renderAfterTime": 8000,
-    "maxConcurrentRoutes": 1,
-    "include": [
-      "/",
-      "/about",
-      "/services",
-      "/fee-structure",
-      "/teacher-details",
-      "/contact",
-      "/faq",
-      "/terms-and-condition",
-      "/resources",
-      "/subjects/maths",
-      "/subjects/english",
-      "/subjects/science",
-      "/subjects/science-subjects",
-      "/test-prep",
-      "/test-prep/sat-act",
-      "/teaching-methods"
-    ]
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -81,8 +51,8 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
-    "react-snap": "^1.23.0",
     "terser": "^5.46.2",
-    "vite": "^5.4.1"
+    "vite": "^5.4.1",
+    "vite-plugin-prerender": "^1.0.8"
   }
 }

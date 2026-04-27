@@ -7,7 +7,7 @@ const Resources = () => (
     <Helmet>
       <title>Free Learning Resources — Coming Soon | Mathedemic</title>
       <meta name="description" content="Mathedemic is preparing free worksheets, practice papers, and study guides for students. Check back soon for free educational resources." />
-      <link rel="canonical" href="https://mathedemic.com/resources" />
+      <link rel="canonical" href="https://www.mathedemic.com/resources" />
     </Helmet>
     <PageHeader title="Free Resources" />
     <section style={{ background: '#FAFAFA', padding: '80px 24px', minHeight: '50vh' }}>

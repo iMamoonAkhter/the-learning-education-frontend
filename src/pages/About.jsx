@@ -10,7 +10,7 @@ const About = () => {
       <Helmet>
         <title>About Mathedemic — Our Mission, Tutors & Teaching Approach</title>
         <meta name="description" content="Learn about Mathedemic's mission to make personalized, affordable online tutoring accessible worldwide. Meet our qualified tutors and discover our teaching approach." />
-        <link rel="canonical" href="https://mathedemic.com/about" />
+        <link rel="canonical" href="https://www.mathedemic.com/about" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

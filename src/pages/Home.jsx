@@ -18,11 +18,11 @@ const Home = () => {
         <meta property="og:title" content="Mathedemic — Personalized Online Tutoring for Every Student" />
         <meta property="og:description" content="Expert one-on-one tutors for Maths, Science & English. Serving UK, USA, Australia. Book a free trial session today." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mathedemic.com/" />
+        <meta property="og:url" content="https://www.mathedemic.com/" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Mathedemic — Personalized Online Tutoring" />
         <meta name="twitter:description" content="Expert one-on-one tutors for Maths, Science & English. Book a free trial today." />
-        <link rel="canonical" href="https://mathedemic.com/" />
+        <link rel="canonical" href="https://www.mathedemic.com/" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

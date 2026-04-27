@@ -162,7 +162,7 @@ const FAQ = () => {
       <Helmet>
         <title>FAQ — Common Questions About Mathedemic Tutoring</title>
         <meta name="description" content="Got questions about Mathedemic's online tutoring? Find answers about how sessions work, payment, scheduling, technical requirements, and more." />
-        <link rel="canonical" href="https://mathedemic.com/faq" />
+        <link rel="canonical" href="https://www.mathedemic.com/faq" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

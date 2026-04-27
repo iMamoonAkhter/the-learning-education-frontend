@@ -158,7 +158,7 @@ const TestPrep = () => {
           name="description"
           content="Expert test preparation tutoring for SAT, ACT, GCSE, A-Level, IB, AP, NAPLAN, and CBSE. Personalised study plans, full-length practice tests, and specialist exam tutors at Mathedemic."
         />
-        <link rel="canonical" href="https://mathedemic.com/test-prep" />
+        <link rel="canonical" href="https://www.mathedemic.com/test-prep" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
@@ -170,7 +170,7 @@ const TestPrep = () => {
         <meta property="og:title" content="Test Preparation — SAT, ACT, GCSE, A-Level, IB & NAPLAN | Mathedemic" />
         <meta property="og:description" content="Expert test preparation tutoring for SAT, ACT, GCSE, A-Level, IB, AP, NAPLAN, and CBSE. Personalised study plans, full-length practice tests, and specialist exam tutors." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mathedemic.com/test-prep" />
+        <meta property="og:url" content="https://www.mathedemic.com/test-prep" />
       </Helmet>
 
       <PageHeader title="Test Preparation" />

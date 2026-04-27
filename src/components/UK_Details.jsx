@@ -42,7 +42,7 @@ const UK_Details = () => {
       <Helmet>
         <title>UK Fee Structure — Affordable Online Tutoring Plans | Mathedemic</title>
         <meta name="description" content="View Mathedemic's transparent UK tutoring fee plans. Affordable one-to-one online tutoring for Year 1–12 students. First session free." />
-        <link rel="canonical" href="https://mathedemic.com/uk-fee-structure" />
+        <link rel="canonical" href="https://www.mathedemic.com/uk-fee-structure" />
       </Helmet>
       <section style={{ paddingTop: "60px", background: "#FAFAFA", minHeight: "60vh" }}>
         <div style={{ textAlign: "center", padding: "0 24px 40px" }}>

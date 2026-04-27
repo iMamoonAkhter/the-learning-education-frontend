@@ -85,7 +85,7 @@ const Services = () => {
       <Helmet>
         <title>Our Services — Maths, Science, English & Test Prep Tutoring</title>
         <meta name="description" content="Explore Mathedemic's tutoring services — Mathematics, Science, English, and Test Preparation (SAT, ACT, GCSE, A-Level, IB, NAPLAN). Tailored one-on-one sessions for every curriculum." />
-        <link rel="canonical" href="https://mathedemic.com/services" />
+        <link rel="canonical" href="https://www.mathedemic.com/services" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

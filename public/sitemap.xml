@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mathedemic.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://mathedemic.com/about</loc><priority>0.8</priority></url>
-  <url><loc>https://mathedemic.com/services</loc><priority>0.8</priority></url>
-  <url><loc>https://mathedemic.com/subjects/maths</loc><priority>0.8</priority></url>
-  <url><loc>https://mathedemic.com/subjects/english</loc><priority>0.8</priority></url>
-  <url><loc>https://mathedemic.com/subjects/science</loc><priority>0.8</priority></url>
-  <url><loc>https://mathedemic.com/subjects/science-subjects</loc><priority>0.8</priority></url>
-  <url><loc>https://mathedemic.com/uk-fee-structure</loc><priority>0.7</priority></url>
-  <url><loc>https://mathedemic.com/us-international-fee-structure</loc><priority>0.7</priority></url>
-  <url><loc>https://mathedemic.com/faq</loc><priority>0.6</priority></url>
-  <url><loc>https://mathedemic.com/teacher-details</loc><priority>0.6</priority></url>
-  <url><loc>https://mathedemic.com/contact</loc><priority>0.7</priority></url>
-  <url><loc>https://mathedemic.com/test-prep</loc><priority>0.8</priority></url>
-  <url><loc>https://mathedemic.com/test-prep/sat-act</loc><priority>0.8</priority></url>
-  <url><loc>https://mathedemic.com/teaching-methods</loc><priority>0.8</priority></url>
-  <url><loc>https://mathedemic.com/resources</loc><priority>0.6</priority></url>
-  <url><loc>https://mathedemic.com/fee-structure</loc><priority>0.7</priority></url>
-  <url><loc>https://mathedemic.com/terms-and-condition</loc><priority>0.4</priority></url>
+  <url><loc>https://www.mathedemic.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.mathedemic.com/about</loc><priority>0.8</priority></url>
+  <url><loc>https://www.mathedemic.com/services</loc><priority>0.8</priority></url>
+  <url><loc>https://www.mathedemic.com/subjects/maths</loc><priority>0.8</priority></url>
+  <url><loc>https://www.mathedemic.com/subjects/english</loc><priority>0.8</priority></url>
+  <url><loc>https://www.mathedemic.com/subjects/science</loc><priority>0.8</priority></url>
+  <url><loc>https://www.mathedemic.com/subjects/science-subjects</loc><priority>0.8</priority></url>
+  <url><loc>https://www.mathedemic.com/fee-structure</loc><priority>0.7</priority></url>
+  <url><loc>https://www.mathedemic.com/faq</loc><priority>0.6</priority></url>
+  <url><loc>https://www.mathedemic.com/teacher-details</loc><priority>0.6</priority></url>
+  <url><loc>https://www.mathedemic.com/contact</loc><priority>0.7</priority></url>
+  <url><loc>https://www.mathedemic.com/test-prep</loc><priority>0.8</priority></url>
+  <url><loc>https://www.mathedemic.com/test-prep/sat-act</loc><priority>0.8</priority></url>
+  <url><loc>https://www.mathedemic.com/teaching-methods</loc><priority>0.8</priority></url>
+  <url><loc>https://www.mathedemic.com/resources</loc><priority>0.6</priority></url>
+  <url><loc>https://www.mathedemic.com/terms-and-condition</loc><priority>0.4</priority></url>
 </urlset>

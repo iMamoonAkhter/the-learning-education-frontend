@@ -57,7 +57,7 @@ const HomeHero = () => {
                   <h2>
                     Personalized{" "}
                     <span style={{ color: "#4281FF", fontStyle: "italic" }}>
-                      <span ref={typedRef}></span>
+                      <span ref={typedRef}>Online Tutoring</span>
                     </span>
                     {" "}For Every Student
                   </h2>

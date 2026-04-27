@@ -317,7 +317,7 @@ const TeachingMethods = () => {
           name="description"
           content="Discover how Mathedemic delivers world-class online tutoring. We use interactive whiteboards, video calling, worksheets, feedback loops, scaffolding, and proven educational psychology to help every student succeed."
         />
-        <link rel="canonical" href="https://mathedemic.com/teaching-methods" />
+        <link rel="canonical" href="https://www.mathedemic.com/teaching-methods" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
@@ -332,7 +332,7 @@ const TeachingMethods = () => {
           content="Discover how Mathedemic delivers world-class online tutoring. Interactive whiteboards, video calling, worksheets, and proven educational psychology to help every student succeed."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mathedemic.com/teaching-methods" />
+        <meta property="og:url" content="https://www.mathedemic.com/teaching-methods" />
       </Helmet>
 
       <PageHeader title="Our Teaching Methods" />
