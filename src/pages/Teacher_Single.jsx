@@ -192,13 +192,13 @@ const Teacher_Single = () => (
     <Helmet>
       <title>Meet Our Expert Tutors — Mathedemic</title>
       <meta name="description" content="Meet the Mathedemic team — qualified, experienced tutors specialising in Mathematics, Science, English, and more. Book a free trial with any of our tutors today." />
-      <link rel="canonical" href="https://www.mathedemic.com/teacher-details" />
+      <link rel="canonical" href="https://www.mathedemic.com/tutors" />
       <script type="application/ld+json">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
           {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mathedemic.com/"},
-          {"@type": "ListItem", "position": 2, "name": "Our Tutors", "item": "https://www.mathedemic.com/teacher-details"}
+          {"@type": "ListItem", "position": 2, "name": "Our Tutors", "item": "https://www.mathedemic.com/tutors"}
         ]
       })}</script>
     </Helmet>

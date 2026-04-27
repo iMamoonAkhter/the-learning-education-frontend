@@ -53,9 +53,9 @@ const Navbar = () => {
   const isAboutActive =
     location.pathname === "/about" ||
     location.pathname === "/testimonial" ||
-    location.pathname === "/teacher-details" ||
+    location.pathname === "/tutors" ||
     location.pathname === "/faq" ||
-    location.pathname === "/terms-and-condition";
+    location.pathname === "/terms";
 
   return (
     <AppBar position="static" sx={{ backgroundColor: "white", color: "black", boxShadow: "none", position: "relative", zIndex: 1200 }}>
@@ -162,10 +162,10 @@ const Navbar = () => {
               }}>
                 {[
                   { path: "/about", label: "About Us" },
-                  { path: "/teacher-details", label: "Our Tutors" },
+                  { path: "/tutors", label: "Our Tutors" },
                   { path: "/faq", label: "FAQ" },
                   { path: "/resources", label: "Resources" },
-                  { path: "/terms-and-condition", label: "Terms & Conditions" },
+                  { path: "/terms", label: "Terms & Conditions" },
                 ].map(({ path, label }) => (
                   <Box
                     key={path}
@@ -263,10 +263,10 @@ const Navbar = () => {
                 <List component="div" disablePadding>
                   {[
                     { path: "/about", label: "About Us" },
-                    { path: "/teacher-details", label: "Our Tutors" },
+                    { path: "/tutors", label: "Our Tutors" },
                     { path: "/faq", label: "FAQ" },
                     { path: "/resources", label: "Resources" },
-                    { path: "/terms-and-condition", label: "Terms & Conditions" },
+                    { path: "/terms", label: "Terms & Conditions" },
                   ].map(({ path, label }) => (
                     <ListItem key={path} component={Link} to={path} onClick={handleDrawerClose}
                       sx={{ pl: 4, color: location.pathname === path ? "white" : "inherit", backgroundColor: location.pathname === path ? "#4281ff" : "transparent", "&:hover": { backgroundColor: "#e9ecef" } }}>

@@ -8,7 +8,7 @@ const Terms_And_Condition = () => {
       <Helmet>
         <title>Terms & Conditions — Mathedemic Tutoring</title>
         <meta name="description" content="Read Mathedemic's terms and conditions for our online tutoring services, payment policies, cancellation policy, and more." />
-        <link rel="canonical" href="https://www.mathedemic.com/terms-and-condition" />
+        <link rel="canonical" href="https://www.mathedemic.com/terms" />
       </Helmet>
         <PageHeader title="Terms & Conditions" />
         <TermsDetails />

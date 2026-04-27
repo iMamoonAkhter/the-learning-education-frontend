@@ -43,6 +43,7 @@ const Make_US_Different = () => {
       backSpeed: 40,
       backDelay: 2200,
       loop: true,
+      showCursor: false,
     });
     return () => typed.destroy();
   }, []);

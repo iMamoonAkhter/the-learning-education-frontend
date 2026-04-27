@@ -160,8 +160,6 @@ Add /index.md to any page URL to get the clean content version.
 - https://www.mathedemic.com/subjects/science-subjects/index.md
 - https://www.mathedemic.com/test-prep/index.md
 - https://www.mathedemic.com/test-prep/sat-act/index.md
-- https://www.mathedemic.com/teacher-details/index.md
-- https://www.mathedemic.com/terms-and-condition/index.md
 
 ## What Makes Mathedemic Different
 

@@ -20,6 +20,7 @@ const EmpoweringStudent = () => {
       backDelay: 2000,
       loop: true,
       smartBackspace: true,
+      showCursor: false,
     });
     return () => typed.destroy();
   }, []);

@@ -38,7 +38,7 @@ const HomeHero = () => {
       backDelay: 2000,
       loop: true,
       smartBackspace: true,
-      cursorChar: '|',
+      showCursor: false,
     });
     return () => typed.destroy();
   }, []);

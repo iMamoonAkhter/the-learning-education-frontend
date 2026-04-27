@@ -39,9 +39,11 @@ const AppRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/testimonial" element={<Testimonal />} />
+        <Route path="/tutors" element={<Teacher_Single />} />
         <Route path="/teacher-details" element={<Teacher_Single />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/terms" element={<TermsCondition />} />
         <Route path="/terms-and-condition" element={<TermsCondition />} />
         <Route path="/fee-structure" element={<Fee_Structure />} />
         <Route path="/uk-fee-structure" element={<Fee_Structure />} />

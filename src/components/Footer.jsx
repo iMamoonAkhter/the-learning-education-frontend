@@ -102,7 +102,7 @@ const Footer = () => {
                   </div>
                   <ul>
                     <li>
-                      <Link style={footerLinkStyle} to="/terms-and-condition" onClick={scrollToTop}>
+                      <Link style={footerLinkStyle} to="/terms" onClick={scrollToTop}>
                         Terms & Conditions
                       </Link>
                     </li>
@@ -112,7 +112,7 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link style={footerLinkStyle} to="/teacher-details" onClick={scrollToTop}>
+                      <Link style={footerLinkStyle} to="/tutors" onClick={scrollToTop}>
                         Our Tutors
                       </Link>
                     </li>
